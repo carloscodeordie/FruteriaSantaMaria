@@ -24,6 +24,7 @@ gulp.task('default', function(callback) {
     //'install-dependencies',
     'process-site-index',
     'process-site-pages',
+    'process-directive-pages',
     'process-site-styles',
     'process-site-scripts',
     'process-resources-scripts',
@@ -33,10 +34,13 @@ gulp.task('default', function(callback) {
     'process-fonts',
     'watch-site-index',
     'watch-site-pages',
+    'watch-directive-pages',
     'watch-site-styles',
     'watch-site-scripts',
     'watch-vendor-styles',
     'watch-resources-scripts',
+    'watch-images',
+    'watch-videos',
     function (error) {
         if (error) {
             util.log(error.message);
@@ -67,6 +71,15 @@ gulp.task('process-site-pages', function() {
         ])
         .pipe(gulp.dest(DIST_FOLDER + '/pages'))
         .pipe(notify({ message: 'FRUTERIA SANTA MARIA -> process-site-pages task complete' }));
+});
+
+gulp.task('process-directive-pages', function() {
+    util.log('FRUTERIA SANTA MARIA -> Running process-directive-pages task...');
+    return gulp.src([
+            SITE_FOLDER + '/etc/directives/**/*.html'
+        ])
+        .pipe(gulp.dest(DIST_FOLDER + '/etc/directives'))
+        .pipe(notify({ message: 'FRUTERIA SANTA MARIA -> process-directive-pages task complete' }));
 });
 
 gulp.task('process-site-styles', function() {
@@ -174,6 +187,10 @@ gulp.task('watch-site-pages', function() {
     gulp.watch(SITE_FOLDER + '/pages/**/*.html', ['process-site-pages'])
 });
 
+gulp.task('watch-directive-pages', function() {
+    gulp.watch(SITE_FOLDER + '/etc/directives/**/*.html', ['process-directive-pages'])
+});
+
 gulp.task('watch-site-styles', function() {
     gulp.watch(SITE_FOLDER + '/resources/css/app/sass/*.scss', ['process-site-styles'])
 });
@@ -188,4 +205,12 @@ gulp.task('watch-vendor-styles', function() {
 
 gulp.task('watch-resources-scripts', function() {
     gulp.watch(SITE_FOLDER + '/resources/js/**/*.js', ['process-resources-scripts'])
+});
+
+gulp.task('watch-images', function() {
+    gulp.watch(SITE_FOLDER + '/resources/images/**/*.{gif,jpg,png,svg}', ['process-images'])
+});
+
+gulp.task('watch-videos', function() {
+    gulp.watch(SITE_FOLDER + '/resources/videos/*', ['process-videos'])
 });

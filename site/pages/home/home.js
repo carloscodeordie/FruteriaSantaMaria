@@ -6,7 +6,7 @@ homeModule.controller('homeController', [
     '$scope',
     function($scope) {
     
-   // Initialization of data
+    // Initialization of data
     var init = function() {
         
     };

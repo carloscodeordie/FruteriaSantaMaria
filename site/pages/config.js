@@ -3,10 +3,9 @@ var appConfig = angular.module('appConfig', [])
 	
 	var config = this;
 	
-	config.dist = '/dist';
-	config.resourcesPath = config.dist + '/resources/';
-	config.pagesPath = config.dist + '/pages/';
-	config.api = config.dist + '/api/';
+	config.resourcesPath = '/resources/';
+	config.pagesPath = '/pages/';
+	config.api = '/api/';
 	config.geonames = 'http://api.geonames.org/';
 	config.home = '/home';
 	

@@ -3,11 +3,12 @@ var appConfig = angular.module('appConfig', [])
 	
 	var config = this;
 	
-	config.context = '/' + window.location.pathname.split('/')[1];
-	config.resourcesPath = config.context + '/resources/';
-	config.pagesPath = config.context + '/pages/';
-	config.api = config.context + '/api/';
+	config.dist = '/dist';
+	config.resourcesPath = config.dist + '/resources/';
+	config.pagesPath = config.dist + '/pages/';
+	config.api = config.dist + '/api/';
 	config.geonames = 'http://api.geonames.org/';
+	config.home = '/home';
 	
 	this.$get = function() {
 		return config;

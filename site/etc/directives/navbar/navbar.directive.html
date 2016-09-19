@@ -1,4 +1,4 @@
-<section class="my-navbar">
+<section class="my-navbar-directive">
     <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
@@ -8,21 +8,36 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">Frutería Santa María</a>
+                <a class="navbar-brand" href="#home">
+                    <span>FRUTERIA SANTA MARIA</span>
+                </a>
             </div>
             <div id="navbar" class="navbar-collapse collapse">
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="tel:{{phone}}" ng-bind="phone"></a></li>
-                    <li><a href="mailto:{{email}}" ng-bind="email"></a></li>
                     <li>
-                        <a ng-href="{{facebook.url}}">
-                            <img class="img-responsive my-social-icon" ng-src="{{facebook.image}}">
+                        <a href="tel:{{phone}}">
+                            <span class="description">CONTACTO</span>
+                            <span ng-bind="phone" class="link"></span>
                         </a>
                     </li>
                     <li>
-                        <a ng-href="{{youtube.url}}">
-                            <img class="img-responsive my-social-icon" ng-src="{{youtube.image}}">
+                        <a href="mailto:{{email}}">
+                            <span ng-bind="email" class="link"></span>
                         </a>
+                    </li>
+                    <li>
+                        <div class="my-social-container">
+                            <div class="pull-left">
+                                <a ng-href="{{youtube.url}}">
+                                    <img class="img-responsive my-social-icon" ng-src="{{youtube.image}}">
+                                </a>
+                            </div>
+                            <div class="pull-left">
+                                <a ng-href="{{facebook.url}}">
+                                    <img class="img-responsive my-social-icon" ng-src="{{facebook.image}}">
+                                </a>
+                            </div>
+                        </div>
                     </li>
                 </ul>
             </div>

@@ -1,0 +1,133 @@
+// Variable declaration
+$my-navbar-background-color: #FA5555;
+
+// Fonts declaration
+@import 'https://fonts.googleapis.com/css?family=Roboto:900';
+
+// Mixin declaration
+@mixin nav-font-mixin {
+    // Change font family of Bootstrap's navbar-brand
+    font-family: 'Roboto';
+    font-size: 13px;
+    font-weight: bold;
+
+    // Change color of Bootstrap's navbar-brand
+    color: #FFF;
+}
+
+@mixin opacity-mixin {
+    // Change opacity
+    opacity: 0.7;
+}
+
+@mixin no-opacity-mixin {
+    // Change opacity
+    opacity: 1.0;
+    transition: all 0.25s ease-in-out;
+}
+
+@mixin no-container-paddings-mixin {
+    // Remove left and right paddings of Bootstrap's container
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+@mixin stretch-image-mixin($url, $height) {
+    // Make an image stretch
+    background-image: url($url);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    height: $height;
+}
+
+// Styles for myNavbar directive
+my-navbar {
+    .my-navbar-directive {
+        .navbar.navbar-default {
+            // Change background color of Bootstrap's navbar-default
+            background-color: $my-navbar-background-color;
+            border-color: $my-navbar-background-color;
+            background-image: none;
+
+            // Change height size of Bootstrap's navbar-default
+            min-height: 35px;
+
+            // Change margin bottom of Bootstrap's navbar
+            margin-bottom: 0px;
+
+            .navbar-header {
+                // Change height size and paddings of Bootstrap's navbar-brand
+                .navbar-brand {
+                    height: 35px;
+                    padding: 8px 15px 7px 15px;
+
+                    span {
+                        @include nav-font-mixin;
+                    }
+                }
+            }
+
+            #navbar {
+                .nav.navbar-nav {
+                    a {
+                        // Change paddings from Bootstrap's nav
+                        padding-top: 8px;
+                        padding-bottom: 7px;
+
+                        @include nav-font-mixin;
+
+                        // Add a margin when tab contains a description
+                        .description {
+                            margin-right: 10px;
+                        }
+
+                        // Add opacity
+                        .link {
+                            @include opacity-mixin;
+                        }
+                        // Add opacity effects
+                        .link:hover {
+                            @include no-opacity-mixin;
+                        }
+                    }
+                    .my-social-container {
+                        .pull-left {
+                            // Add a padding to separate the social network icons
+                            padding: 2px 0px 2px 15px;
+
+                            .my-social-icon {
+                                // Change heights for social icons
+                                height: 30px;
+
+                                // Add opacity
+                                @include opacity-mixin;
+                            }
+
+                            // Add opacity effects
+                            .my-social-icon:hover {
+                                @include no-opacity-mixin;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+// Styles for myPresentation directive
+my-presentation {
+    .my-presentation-directive {
+        // Add a top margin due fixed navbar
+        margin-top: 35px;
+        .container-fluid {
+
+            // Remove paddings of Bootstrap's container
+            @include no-container-paddings-mixin;
+
+            .presentation-container {
+                @include stretch-image-mixin("../images/presentation/salad.jpg", 650px);
+            }
+        }
+        
+    }
+}

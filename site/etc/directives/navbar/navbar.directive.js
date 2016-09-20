@@ -11,7 +11,7 @@ var navbarDirective = angular.module('navbarDirective', [
         controller:                     function($scope, config) {
             // Initialization of links
             var initLinks = function() {
-                $scope.phone = 524499736705;
+                $scope.phone = '9736705';
                 $scope.email = 'pedidos@fruteriasantamaria.com';
                 $scope.facebook = {
                     url:        'https://www.facebook.com/FruteriaSantaMariaAlcazar/',

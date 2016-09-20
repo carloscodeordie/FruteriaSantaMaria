@@ -1,8 +1,11 @@
 // Variable declaration
-$my-navbar-background-color: #FA5555;
+$pink-light-color: #EE5189;
+$pink-bold-color: #E91069;
+$inverse-font-color: #FFF;
 
 // Fonts declaration
 @import 'https://fonts.googleapis.com/css?family=Roboto:900';
+@import 'https://fonts.googleapis.com/css?family=Dosis:800';
 
 // Mixin declaration
 @mixin nav-font-mixin {
@@ -12,7 +15,7 @@ $my-navbar-background-color: #FA5555;
     font-weight: bold;
 
     // Change color of Bootstrap's navbar-brand
-    color: #FFF;
+    color: $inverse-font-color;
 }
 
 @mixin opacity-mixin {
@@ -24,6 +27,7 @@ $my-navbar-background-color: #FA5555;
     // Change opacity
     opacity: 1.0;
     transition: all 0.25s ease-in-out;
+    cursor: pointer;
 }
 
 @mixin no-container-paddings-mixin {
@@ -40,13 +44,24 @@ $my-navbar-background-color: #FA5555;
     height: $height;
 }
 
+@mixin search-button-mixin {
+    // Change size and color of search button
+    font-size: 35px;
+    color: $inverse-font-color;
+}
+
+@mixin font-color-mixin($color) {
+    // Change font color
+    color: $color;
+}
+
 // Styles for myNavbar directive
 my-navbar {
     .my-navbar-directive {
         .navbar.navbar-default {
             // Change background color of Bootstrap's navbar-default
-            background-color: $my-navbar-background-color;
-            border-color: $my-navbar-background-color;
+            background-color: $pink-light-color;
+            border-color: $pink-light-color;
             background-image: none;
 
             // Change height size of Bootstrap's navbar-default
@@ -67,7 +82,7 @@ my-navbar {
                 }
             }
 
-            #navbar {
+            #myNavbar {
                 .nav.navbar-nav {
                     a {
                         // Change paddings from Bootstrap's nav
@@ -125,7 +140,68 @@ my-presentation {
             @include no-container-paddings-mixin;
 
             .presentation-container {
+                
+                // Stretch the presentation image
                 @include stretch-image-mixin("../images/presentation/salad.jpg", 650px);
+                
+                .jumbotron {
+                    // Makes transparent the Bootstrap's Jumbotron background color
+                    background-color: transparent;
+                    .navbar {
+                        // Add padding top for inner navbar
+                        padding-top: 20px;
+
+                        .navbar-header {
+                            .navbar-brand {
+                                .my-logo {
+                                    // Move position of logo
+                                    margin-top: -70px;
+                                    margin-left: -20px;
+                                }
+                            }
+                        }
+                        #presentation-navbar {
+                            .nav.navbar-nav {
+                                .my-search {
+                                    // Change position of search button
+                                    margin-top: 20px;
+                                    
+                                    // Change size and color of search button 
+                                    @include search-button-mixin;
+
+                                    // Add opacity
+                                    @include opacity-mixin;
+                                    
+                                }
+
+                                .my-search:hover {
+                                    // Add opacity effects
+                                    @include no-opacity-mixin;
+                                }
+                            }
+                        }
+                    }
+                    .presentation-content {
+                        
+                        // Shows content at bottom
+                        margin-top: 240px;
+                        
+                        // Change the color of presentation content text
+                        color: $inverse-font-color;
+
+                        h1 {
+                            font-family: 'Dosis', sans-serif;
+                            font-size: 75px;
+                        }
+
+                        .btn {
+                            color: $pink-bold-color;
+                            font-family: 'Roboto', sans-serif;
+                            padding-left: 40px;
+                            padding-right: 40px;
+                        }
+                    }
+                }
             }
         }
         

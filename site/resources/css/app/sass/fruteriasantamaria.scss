@@ -1,11 +1,17 @@
 // Variable declaration
+$pink-opacity-color: #EE80A7;
 $pink-light-color: #EE5189;
 $pink-bold-color: #E91069;
 $inverse-font-color: #FFF;
 
+$small-devices: 768px;
+$medium-devices: 992px;
+$large-devices: 1200px;
+
 // Fonts declaration
 @import 'https://fonts.googleapis.com/css?family=Roboto:900';
 @import 'https://fonts.googleapis.com/css?family=Dosis:800';
+@import 'https://fonts.googleapis.com/css?family=Pacifico';
 
 // Mixin declaration
 @mixin nav-font-mixin {
@@ -53,6 +59,13 @@ $inverse-font-color: #FFF;
 @mixin font-color-mixin($color) {
     // Change font color
     color: $color;
+}
+
+@mixin services-font-mixin() {
+    background-color: $pink-opacity-color;
+    color: $inverse-font-color;
+    font-family: 'Pacifico', sans-serif;
+    opacity: 0.8;
 }
 
 // Styles for myNavbar directive
@@ -141,8 +154,29 @@ my-presentation {
 
             .presentation-container {
                 
-                // Stretch the presentation image
-                @include stretch-image-mixin("../images/presentation/salad.jpg", 650px);
+                /* Extra small devices */
+                @media (max-width: $small-devices) {
+                    // Stretch the presentation image
+                    @include stretch-image-mixin("../images/presentation/salad.jpg", 500px);
+                }
+
+                /* Small devices */
+                @media (min-width: $small-devices) {
+                    // Stretch the presentation image
+                    @include stretch-image-mixin("../images/presentation/salad.jpg", 650px);
+                }
+
+                /* Medium devices */
+                @media (min-width: $medium-devices) {
+                    // Stretch the presentation image
+                    @include stretch-image-mixin("../images/presentation/salad.jpg", 650px);
+                }
+
+                /* Large devices */
+                @media (min-width: $large-devices) {
+                    // Stretch the presentation image
+                    @include stretch-image-mixin("../images/presentation/salad.jpg", 650px);
+                }
                 
                 .jumbotron {
                     // Makes transparent the Bootstrap's Jumbotron background color
@@ -183,15 +217,32 @@ my-presentation {
                     }
                     .presentation-content {
                         
-                        // Shows content at bottom
-                        margin-top: 240px;
+                        /* Extra small devices */
+                        @media (max-width: $small-devices) {
+                            // Shows content at bottom
+                            margin-top: 20px;
+                        }
                         
-                        // Change the color of presentation content text
-                        color: $inverse-font-color;
+                        /* Small devices */
+                        @media (min-width: $small-devices) {
+                            // Shows content at bottom
+                            margin-top: 200px;
+                        }
 
+                        /* Medium devices */
+                        @media (min-width: $medium-devices) {
+                            // Shows content at bottom
+                            margin-top: 200px;
+                        }
+                        
                         h1 {
                             font-family: 'Dosis', sans-serif;
-                            font-size: 75px;
+                            color: $pink-bold-color;
+                        }
+
+                        .presentation-description {
+                            color: $inverse-font-color;
+                            font-weight: bold;
                         }
 
                         .btn {
@@ -205,5 +256,54 @@ my-presentation {
             }
         }
         
+    }
+}
+
+my-store-services {
+    .my-services-directive {
+        .jumbotron {
+            background-color: transparent;
+            margin-top: -150px;
+            .container {
+
+                // padding around store services blocks
+                padding: 30px;
+                background-color: $inverse-font-color;
+
+                .service-container {
+                    position: relative;
+                    h1 {
+                        // Make header appears inside the image
+                        position: absolute;
+                        width: 100%;
+                        
+                        // Change services fonts
+                        @include services-font-mixin;
+
+                        /* Extra small devices */
+                        @media (max-width: $small-devices) {
+                            // Shows content at bottom
+                            margin-top: 70px;
+                        }
+                        
+                        /* Small devices */
+                        @media (min-width: $small-devices) {
+                            // Shows content at bottom
+                            margin-top: 200px;
+                        }
+
+                        /* Medium devices */
+                        @media (min-width: $medium-devices) {
+                            // Shows content at bottom
+                            margin-top: 150px;
+                        }
+                        
+                    }
+                    img {
+                        width: 100%;
+                    }
+                }
+            }
+        }
     }
 }

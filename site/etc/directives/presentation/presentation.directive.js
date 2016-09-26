@@ -1,4 +1,4 @@
-var navbarDirective = angular.module('presentationDirective', [
+var presentationDirective = angular.module('presentationDirective', [
     'appConfig'
 ])
 .directive('myPresentation', function(config) {

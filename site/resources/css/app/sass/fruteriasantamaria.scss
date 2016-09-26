@@ -2,7 +2,7 @@
 $pink-opacity-color: #EE80A7;
 $pink-light-color: #EE5189;
 $pink-bold-color: #E91069;
-$inverse-font-color: #FFF;
+$inverse-color: #FFF;
 
 $small-devices: 768px;
 $medium-devices: 992px;
@@ -10,7 +10,7 @@ $large-devices: 1200px;
 
 // Fonts declaration
 @import 'https://fonts.googleapis.com/css?family=Roboto:900';
-@import 'https://fonts.googleapis.com/css?family=Dosis:800';
+@import 'https://fonts.googleapis.com/css?family=Dosis:400,800';
 @import 'https://fonts.googleapis.com/css?family=Pacifico';
 
 // Mixin declaration
@@ -21,7 +21,7 @@ $large-devices: 1200px;
     font-weight: bold;
 
     // Change color of Bootstrap's navbar-brand
-    color: $inverse-font-color;
+    color: $inverse-color;
 }
 
 @mixin opacity-mixin {
@@ -53,7 +53,7 @@ $large-devices: 1200px;
 @mixin search-button-mixin {
     // Change size and color of search button
     font-size: 35px;
-    color: $inverse-font-color;
+    color: $inverse-color;
 }
 
 @mixin font-color-mixin($color) {
@@ -63,9 +63,18 @@ $large-devices: 1200px;
 
 @mixin services-font-mixin() {
     background-color: $pink-opacity-color;
-    color: $inverse-font-color;
+    color: $inverse-color;
     font-family: 'Pacifico', sans-serif;
     opacity: 0.8;
+}
+
+@mixin callout_mixin() {
+    background-color: $inverse-color;
+    margin: 0 0 1rem 0;
+    padding: 1rem 2rem;
+    position: relative;
+    color: #0a0a0a;
+    border-radius: 5px;
 }
 
 // Styles for myNavbar directive
@@ -237,11 +246,12 @@ my-presentation {
                         
                         h1 {
                             font-family: 'Dosis', sans-serif;
+                            font-weight: 700;
                             color: $pink-bold-color;
                         }
 
                         .presentation-description {
-                            color: $inverse-font-color;
+                            color: $inverse-color;
                             font-weight: bold;
                         }
 
@@ -264,11 +274,14 @@ my-store-services {
         .jumbotron {
             background-color: transparent;
             margin-top: -150px;
+            margin-bottom: 0;
+            padding-bottom: 0;
+
             .container {
 
                 // padding around store services blocks
                 padding: 30px;
-                background-color: $inverse-font-color;
+                background-color: $inverse-color;
 
                 .service-container {
                     position: relative;
@@ -302,6 +315,69 @@ my-store-services {
                     img {
                         width: 100%;
                     }
+                }
+            }
+        }
+    }
+}
+
+my-recommendations {
+    .my-recommendations-directive {
+        background: #F199B8;
+        .container {
+            padding-bottom: 20px;
+            .title {
+                margin-bottom: 3rem;
+                h1 {
+                    font-family: 'Dosis', sans-serif;
+                    font-weight: 700;
+                }
+            }
+            .callout {
+                @include callout_mixin;
+
+                border-color: #F199B8;
+                
+                .profile {
+                    .name {
+                        font-family: 'Pacifico', sans-serif;
+                        color: $pink-bold-color;
+                    }
+                    .company {
+                        font-family: 'Dosis', sans-serif;
+                        font-size: 17px;
+                    }
+                    .thumbnail {
+                        width: 250px;
+                        height: 250px;
+                        border-radius: 100px;
+                        border: none;
+                        margin: 0 auto;
+                    }
+                }
+                .comments {
+                    margin-top: 25px;
+                    .lead {
+                        font-family: 'Dosis', sans-serif;
+                        font-weight: 700;
+                    }
+                    .scrollable-container {
+                        overflow-y: auto;
+                        max-height: 125px;
+                        .subheader {
+                            font-family: 'Dosis', sans-serif;
+                            font-size: 19px;
+                        }
+                    }
+                }
+                .site {
+                    a {
+                        margin-top: 20px;
+                        margin-bottom: 10px;
+                        
+                        background-color: $pink-light-color;
+                        border: $pink-bold-color 1px solid;
+                    }   
                 }
             }
         }

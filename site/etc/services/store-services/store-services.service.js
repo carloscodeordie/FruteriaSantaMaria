@@ -30,7 +30,7 @@ storeServicesService.factory('storeServicesFactory', function(config) {
     
     return factory;
 });
-storeServicesService.service('storeServices', function(storeServicesFactory){
+storeServicesService.service('storeService', function(storeServicesFactory){
     this.all = function() {
         return storeServicesFactory.getStoreServices();
     }

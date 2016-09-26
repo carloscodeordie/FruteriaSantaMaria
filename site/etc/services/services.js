@@ -1,3 +1,4 @@
 var servicesModule = angular.module('servicesModule', [
-    'storeServicesService'
+    'storeServicesService',
+    'recommendersService'
 ]);

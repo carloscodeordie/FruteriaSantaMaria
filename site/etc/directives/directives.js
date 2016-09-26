@@ -1,5 +1,6 @@
 var directivesModule = angular.module('directivesModule', [
     'navbarDirective',
     'presentationDirective',
-    'storeServicesDirective'
+    'storeServicesDirective',
+    'recommendationsDirective'
 ]);

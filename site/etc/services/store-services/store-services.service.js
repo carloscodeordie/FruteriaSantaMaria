@@ -1,7 +1,8 @@
 var storeServicesService = angular.module('storeServicesService', [
-    'appConfig'
+    'appConfig',
+    'generalService'
 ]);
-storeServicesService.factory('storeServicesFactory', function(config) {
+storeServicesService.factory('storeServicesFactory', function(config, generalService) {
     var factory = {};
     factory.getStoreServices = function() {
         return [
@@ -12,7 +13,7 @@ storeServicesService.factory('storeServicesFactory', function(config) {
                     url:            config.resourcesPath + 'images/store-services/frutas_y_verduras.jpg'
                 },
                 path: {
-                    url:            config.context + '#productos'
+                    url:            generalService.getPaths().productos
                 }
             },
             {
@@ -22,7 +23,7 @@ storeServicesService.factory('storeServicesFactory', function(config) {
                     url:            config.resourcesPath + 'images/store-services/recetas.jpg'
                 },
                 path: {
-                    url:            config.context + '#recetas'
+                    url:            generalService.getPaths().recetas
                 }
             }
         ]

@@ -1,0 +1,73 @@
+<section class="my-footer-directive">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-md-3 columna">
+                <a ng-href="{{paths.home}}">
+                    <img class="img-responsive logo" ng-src="{{store.transparentLogo.url}}">
+                </a>
+            </div>
+            <div class="col-xs-12 col-md-5 columna">
+                <h4 class="subtitle">Frutería Santa María</h4>
+                <p>Ordena tu mandado desde el celular y te llegara a la hora que lo pidas.</p>
+            </div>
+            <div class="col-xs-12 col-md-4 columna">
+                <h4 class="subtitle">Más links:</h4>
+                <ul class="list-inline">
+                    <li>
+                        <a class="link" ng-href="{{paths.productos}}">Productos</a>
+                    </li>
+                    <li>
+                        <a class="link" ng-href="{{paths.recetas}}">Recetas</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="row ultima">
+            <div class="col-xs-12 col-md-4 columna">
+                <h4 class="subtitle">Siguenos en:</h4>
+                <ul class="list-inline">
+                    <li>
+                        <a ng-href="{{social.facebook.url}}">
+                            <img class="img-responsive" ng-src="{{social.facebook.image}}">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-xs-12 col-md-3 columna">
+                <h4 class="subtitle">Contactanos:</h4>
+                <ul class="list-unstyled">
+                    <li>
+                        <span>Telefono: </span>
+                        <a href="tel:{{store.phone}}">
+                            <span ng-bind="store.phone" class="link"></span>
+                        </a>
+                    </li>
+                    <li>
+                        <span>Email: </span>
+                        <a href="mailto:{{store.email}}">
+                            <span ng-bind="store.email" class="link"></span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-xs-12 col-md-5 columna">
+                <h4 class="subtitle">Buscar:</h4>
+                <form>
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Limones...">
+                        <span class="input-group-btn">
+                            <button class="btn btn-default" type="button">
+                                <span class="glyphicon glyphicon-search my-search"></span>
+                            </button>
+                        </span>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="row">
+            <div class="copyright">
+                <p>Developed by @CodeOrDie</p>
+            </div>
+        </div>
+    </div>
+</section>

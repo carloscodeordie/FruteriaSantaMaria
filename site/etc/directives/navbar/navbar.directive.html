@@ -15,26 +15,26 @@
             <div id="myNavbar" class="navbar-collapse collapse">
                 <ul class="nav navbar-nav navbar-right">
                     <li>
-                        <a href="tel:{{phone}}">
+                        <a href="tel:{{store.phone}}">
                             <span class="description">CONTACTO</span>
-                            <span ng-bind="phone" class="link"></span>
+                            <span ng-bind="store.phone" class="link"></span>
                         </a>
                     </li>
                     <li>
-                        <a href="mailto:{{email}}">
-                            <span ng-bind="email" class="link"></span>
+                        <a href="mailto:{{store.email}}">
+                            <span ng-bind="store.email" class="link"></span>
                         </a>
                     </li>
                     <li>
                         <div class="my-social-container">
                             <div class="pull-left">
-                                <a ng-href="{{youtube.url}}">
-                                    <img class="img-responsive my-social-icon" ng-src="{{youtube.image}}">
+                                <a ng-href="{{social.youtube.url}}">
+                                    <img class="img-responsive my-social-icon" ng-src="{{social.youtube.image}}">
                                 </a>
                             </div>
                             <div class="pull-left">
-                                <a ng-href="{{facebook.url}}">
-                                    <img class="img-responsive my-social-icon" ng-src="{{facebook.image}}">
+                                <a ng-href="{{social.facebook.url}}">
+                                    <img class="img-responsive my-social-icon" ng-src="{{social.facebook.image}}">
                                 </a>
                             </div>
                         </div>

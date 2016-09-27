@@ -9,7 +9,7 @@ $medium-devices: 992px;
 $large-devices: 1200px;
 
 // Fonts declaration
-@import 'https://fonts.googleapis.com/css?family=Roboto:900';
+@import 'https://fonts.googleapis.com/css?family=Roboto:400,900';
 @import 'https://fonts.googleapis.com/css?family=Dosis:400,800';
 @import 'https://fonts.googleapis.com/css?family=Pacifico';
 
@@ -18,7 +18,7 @@ $large-devices: 1200px;
     // Change font family of Bootstrap's navbar-brand
     font-family: 'Roboto';
     font-size: 13px;
-    font-weight: bold;
+    font-weight: 900;
 
     // Change color of Bootstrap's navbar-brand
     color: $inverse-color;
@@ -379,6 +379,58 @@ my-recommendations {
                         border: $pink-bold-color 1px solid;
                     }   
                 }
+            }
+        }
+    }
+}
+my-footer {
+    .my-footer-directive {
+        background-color: #222;
+        color: $inverse-color;
+        font-family: 'Roboto', sans-serif;
+        font-size: 12px;
+
+        .container {
+            padding-top: 40px;
+            padding-bottom: 0px;
+            .row {
+                .columna {
+                    border: $pink-light-color 1px solid;
+                    height: 130px;
+                    padding: 10px 20px;
+                    .subtitle {
+                        font-weight: 900;
+                        font-size: 14px;
+                        color: $pink-bold-color;
+                    }
+                    .logo {
+                        height: 100px;
+                        margin: 5px auto;
+                    }
+                    .link {
+                        color: $inverse-color;
+                    }
+                }
+                /* Medium devices */
+                @media (min-width: $medium-devices) {
+                    .columna:first-child {
+                        border-right: none;
+                    }
+                    .columna:last-child {
+                        border-left: none;
+                    }
+                }
+            }
+            /* Medium devices */
+            @media (min-width: $medium-devices) {
+                .row.ultima {
+                    .columna {
+                        border-top: none;
+                    }
+                }
+            }
+            .copyright {
+                margin-top: 10px;
             }
         }
     }

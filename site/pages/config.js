@@ -10,6 +10,8 @@ var appConfig = angular.module('appConfig', [])
 	config.api = '/api/';
 	config.geonames = 'http://api.geonames.org/';
 	config.home = '/home';
+	config.productos = '/productos';
+	config.recetas = '/recetas';
 	
 	this.$get = function() {
 		return config;

@@ -155,7 +155,7 @@ gulp.task('process-vendor-styles', function() {
 gulp.task('process-images', function() {
     util.log('FRUTERIA SANTA MARIA -> Running process-images task...');
     return gulp.src([
-            SITE_FOLDER + '/resources/images/**/*.{gif,jpg,png,svg}'
+            SITE_FOLDER + '/resources/images/**/*.{gif,jpg,png,svg,ico}'
         ])
         .pipe(gulp.dest(DIST_FOLDER + '/resources/images'))
         .pipe(notify({ message: 'FRUTERIA SANTA MARIA -> process-images task completed.' }));

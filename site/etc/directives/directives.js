@@ -5,5 +5,7 @@ var directivesModule = angular.module('directivesModule', [
     'recommendationsDirective',
     'footerDirective',
     'productsDirective',
-    'productCategoryDirective'
+    'productCategoryDirective',
+    'cartDirective',
+    'cartDetailDirective'
 ]);

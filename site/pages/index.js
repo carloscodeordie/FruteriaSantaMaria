@@ -4,5 +4,5 @@ var app = angular.module('fruteriaSantaMariaApp', [
 
 app.run(function ($rootScope)
 {
-	
+	$rootScope._ = window._;
 });

@@ -1,0 +1,45 @@
+<section class="my-cart-directive">
+    <div class="icon-cart-container">
+        <div class="pull-right">
+            <div class="icon" ng-click="toggleCart()">
+                <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>
+            </div>
+        </div>
+    </div>
+    <div class="cart-container" ng-if="isCartShowed">
+        <div class="resume">
+            <div class="clearfix">
+                <div>
+                    <h4 class="header">
+                        <span class="badge">{{cart | totalProducts | number}}</span>
+                        <strong class="title">
+                            Frutería Santa María
+                        </strong>
+                    </h4>
+                </div>
+                <div>
+                    <button class="btn checkout">
+                        <span>{{cart | totalCart | currency}}</span>
+                    </button>
+                </div>
+            </div>
+            <div class="calendar">
+                <form>
+                    <div class="form-group">
+                        <span>Hora de entrega:</span>
+                        <input type="text" class="form-control" placeholder="Ej: 1:30 PM">
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="items">
+            <div class="promotion">
+                <strong>Tu envio es gratis!</strong>
+            </div>
+            <my-cart-detail product="product" ng-repeat="product in cart"></my-cart-detail>
+        </div>
+        <div class="checkout">
+            <button type="button" class="btn btn-lg btn-block checkout">Hacer pedido</button>
+        </div>
+    </div>
+</section>

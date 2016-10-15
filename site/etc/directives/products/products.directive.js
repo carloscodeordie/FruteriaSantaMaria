@@ -1,4 +1,5 @@
 var productsDirective = angular.module('productsDirective', [
+    'ngStorage',
     'appConfig',
     'productsService'
 ])
@@ -9,13 +10,8 @@ var productsDirective = angular.module('productsDirective', [
             categories:                 '='
         },
         templateUrl:                    config.etcPath + 'directives/products/products.directive.html',
-        controller:                     function($scope, config) {
-            // Initialization of data
-            var init = function() {
-                
-            };
-            // Run the init function when the controller loads
-            init();
+        controller:                     function($scope, $localStorage, config) {
+            
         }
     };
 });

@@ -13,6 +13,7 @@ $large-devices: 1200px;
 @import 'https://fonts.googleapis.com/css?family=Roboto:400,900';
 @import 'https://fonts.googleapis.com/css?family=Dosis:400,800';
 @import 'https://fonts.googleapis.com/css?family=Pacifico';
+@import 'https://fonts.googleapis.com/css?family=PT+Sans';
 
 // Mixin declaration
 @mixin nav-font-mixin {
@@ -95,6 +96,15 @@ $large-devices: 1200px;
 @mixin pink-button-mixin {
     color: $pink-bold-color;
     font-family: 'Roboto', sans-serif;
+}
+
+@mixin absolute-position-mixin {
+    position: fixed;
+    top: 36px;
+    right: 0;
+    width: 350px;
+    height: 100%;
+    z-index: 1000;
 }
 
 // Styles for myNavbar directive
@@ -462,6 +472,7 @@ my-products {
 }
 my-product-category {
     .my-product-category-directive {
+        margin-bottom: 20px;
         .container-fluid {
             padding-left: 0;
             padding-right: 0;
@@ -513,6 +524,86 @@ my-product-category {
                         background-image: none;
                         color: $pink-light-color;
                     }
+                }
+            }
+        }
+    }
+}
+my-cart {
+    .my-cart-directive {
+        .icon-cart-container {
+            .icon {
+                margin: 20px 30px;
+                cursor: pointer;
+                .glyphicon {
+                    font-size: 40px;
+                    color: #EE5189;
+                }
+            }
+        }
+        @include absolute-position-mixin;
+        .cart-container {
+            border: 1px solid #6A6967;
+            .resume {
+                background-color: #6A6967;
+                padding: 5px 10px;
+                .clearfix {
+                    margin-bottom: 10px;
+                    .header {
+                        .badge {
+                            font-size: 13px;
+                            background-color: #7E7D7B;
+                        }
+                        .title {
+                            color: $inverse-color;
+                            font-family: 'PT Sans', sans-serif;
+                        }
+                    }
+                    .btn.checkout {
+                        background-color: #7E7D7B;
+                        color: $inverse-color;
+                    }
+                }
+                .calendar {
+                    font-family: 'PT Sans', sans-serif;
+                    color: $inverse-color;
+                }
+            }
+            .items {
+                padding: 10px;
+                background-color: $inverse-color;
+                min-height: 275px;
+                height: 275px;
+                overflow-y: auto;
+                overflow-x: hidden;
+                .promotion {
+                    font-family: 'PT Sans', sans-serif;
+                    color: #6A6967;
+                }
+            }
+            .checkout {
+                padding: 10px;
+                background-color: $inverse-color;
+                .checkout {
+                    background-color: #FAA519;
+                    color: $inverse-color;
+                }
+            }
+        }
+    }
+}
+my-cart-detail {
+    .my-cart-detail-directive {
+        border-bottom: 1px solid #6A6967;
+        .cart-detail-container {
+            padding: 5px 0;
+            img {
+                height: 35px;
+            }
+            .remove-icon {
+                span {
+                    color: #CE221E;
+                    font-size: 20px;
                 }
             }
         }

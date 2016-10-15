@@ -15,7 +15,7 @@
                                     <div class="product-details">
                                         <p>
                                             <strong>{{product.price | currency}}</strong>
-                                            &nbsp;&#47;&nbsp;
+                                            <span>&nbsp;&#47;&nbsp;</span>
                                             <em ng-bind="product.unity"></em>
                                         </p>
                                         <p ng-bind="product.name"></p>
@@ -23,7 +23,13 @@
                                     </div>
                                     <div class="product-order clearfix">
                                         <div class="pull-right">
-                                            <button class="btn btn-default">+ Agregar</button>
+                                            <button class="btn btn-default" ng-click="removeProduct(product)" ng-if="product.cart.isAdded">
+                                                <span class="glyphicon glyphicon-minus" aria-hidden="true"></span>
+                                            </button>
+                                            <button class="btn btn-default" ng-click="addProduct(product)">
+                                                <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+                                                <span>&nbsp;Agregar</span>
+                                            </button>
                                         </div>
                                     </div>
                                 </div>

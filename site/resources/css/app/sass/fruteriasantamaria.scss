@@ -103,7 +103,6 @@ $large-devices: 1200px;
     top: 36px;
     right: 0;
     width: 350px;
-    height: 100%;
     z-index: 1000;
 }
 
@@ -496,7 +495,7 @@ my-product-category {
                                     }
                                 }
                                 .product-details {
-                                    min-height: 150px;
+                                    min-height: 80px;
                                 }
                                 .product-order {
                                     button {

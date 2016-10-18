@@ -10,8 +10,157 @@ productsService.factory('productsFactory', function(config) {
                 products: [
                     {
                         id:                     1,
+                        name:                   'Acelgas',
+                        price:                  10,
+                        unity:                  'Kg',
+                        category:               'Verduras',
+                        image: {
+                            url:                config.resourcesPath + 'images/products/vegetables/acelgas.png'
+                        }
+                    },
+                    {
+                        id:                     2,
+                        name:                   'Alcachofa',
+                        price:                  10,
+                        unity:                  'Kg',
+                        category:               'Verduras',
+                        image: {
+                            url:                config.resourcesPath + 'images/products/vegetables/alcachofa.png'
+                        }
+                    },
+                    {
+                        id:                     3,
+                        name:                   'Alfalfa',
+                        price:                  10,
+                        unity:                  'Kg',
+                        category:               'Verduras',
+                        image: {
+                            url:                config.resourcesPath + 'images/products/vegetables/alfalfa.png'
+                        }
+                    },
+                    {
+                        id:                     4,
+                        name:                   'Apio',
+                        price:                  10,
+                        unity:                  'Kg',
+                        category:               'Verduras',
+                        image: {
+                            url:                config.resourcesPath + 'images/products/vegetables/apio.png'
+                        }
+                    },
+                    {
+                        id:                     5,
+                        name:                   'Berenjena',
+                        price:                  10,
+                        unity:                  'Kg',
+                        category:               'Verduras',
+                        image: {
+                            url:                config.resourcesPath + 'images/products/vegetables/berenjena.png'
+                        }
+                    },
+                    {
+                        id:                     5,
+                        name:                   'Berros',
+                        price:                  10,
+                        unity:                  'Kg',
+                        category:               'Verduras',
+                        image: {
+                            url:                config.resourcesPath + 'images/products/vegetables/berros.png'
+                        }
+                    },
+                    {
+                        id:                     7,
+                        name:                   'Brocoli',
+                        price:                  10,
+                        unity:                  'Kg',
+                        category:               'Verduras',
+                        image: {
+                            url:                config.resourcesPath + 'images/products/vegetables/brocoli.png'
+                        }
+                    },
+                    {
+                        id:                     8,
+                        name:                   'Calabacitas',
+                        price:                  10,
+                        unity:                  'Kg',
+                        category:               'Verduras',
+                        image: {
+                            url:                config.resourcesPath + 'images/products/vegetables/calabacitas.png'
+                        }
+                    },
+                    {
+                        id:                     9,
+                        name:                   'Cebolla',
+                        price:                  10,
+                        unity:                  'Kg',
+                        category:               'Verduras',
+                        image: {
+                            url:                config.resourcesPath + 'images/products/vegetables/cebolla.png'
+                        }
+                    },
+                    {
+                        id:                     10,
+                        name:                   'Champiñon',
+                        price:                  10,
+                        unity:                  'Kg',
+                        category:               'Verduras',
+                        image: {
+                            url:                config.resourcesPath + 'images/products/vegetables/champiñon.png'
+                        }
+                    },
+                    {
+                        id:                     11,
+                        name:                   'Chicharos',
+                        price:                  10,
+                        unity:                  'Kg',
+                        category:               'Verduras',
+                        image: {
+                            url:                config.resourcesPath + 'images/products/vegetables/chicharos.png'
+                        }
+                    },
+                    {
+                        id:                     12,
+                        name:                   'Coles de bruselas',
+                        price:                  10,
+                        unity:                  'Kg',
+                        category:               'Verduras',
+                        image: {
+                            url:                config.resourcesPath + 'images/products/vegetables/coles_de_bruselas.png'
+                        }
+                    },
+                    {
+                        id:                     13,
+                        name:                   'Coliflor',
+                        price:                  10,
+                        unity:                  'Kg',
+                        category:               'Verduras',
+                        image: {
+                            url:                config.resourcesPath + 'images/products/vegetables/coliflor.png'
+                        }
+                    },
+                    {
+                        id:                     14,
+                        name:                   'Esparragos',
+                        price:                  10,
+                        unity:                  'Kg',
+                        category:               'Verduras',
+                        image: {
+                            url:                config.resourcesPath + 'images/products/vegetables/esparragos.png'
+                        }
+                    },
+                    {
+                        id:                     15,
+                        name:                   'Espinacas',
+                        price:                  10,
+                        unity:                  'Kg',
+                        category:               'Verduras',
+                        image: {
+                            url:                config.resourcesPath + 'images/products/vegetables/espinacas.png'
+                        }
+                    },
+                    {
+                        id:                     16,
                         name:                   'Jitomate',
-                        description:            'El jitomate sirve para...',
                         price:                  10,
                         unity:                  'Kg',
                         category:               'Verduras',
@@ -20,9 +169,98 @@ productsService.factory('productsFactory', function(config) {
                         }
                     },
                     {
-                        id:                     2,
+                        id:                     17,
+                        name:                   'Lechuga',
+                        price:                  10,
+                        unity:                  'Kg',
+                        category:               'Verduras',
+                        image: {
+                            url:                config.resourcesPath + 'images/products/vegetables/lechuga.png'
+                        }
+                    },
+                    {
+                        id:                     18,
+                        name:                   'Nabo',
+                        price:                  10,
+                        unity:                  'Kg',
+                        category:               'Verduras',
+                        image: {
+                            url:                config.resourcesPath + 'images/products/vegetables/nabo.png'
+                        }
+                    },
+                    {
+                        id:                     19,
+                        name:                   'Pepino',
+                        price:                  10,
+                        unity:                  'Kg',
+                        category:               'Verduras',
+                        image: {
+                            url:                config.resourcesPath + 'images/products/vegetables/pepino.png'
+                        }
+                    },
+                    {
+                        id:                     20,
+                        name:                   'Pimiento amarillo',
+                        price:                  10,
+                        unity:                  'Kg',
+                        category:               'Verduras',
+                        image: {
+                            url:                config.resourcesPath + 'images/products/vegetables/pimiento_amarillo.png'
+                        }
+                    },
+                    {
+                        id:                     21,
+                        name:                   'Pimiento rojo',
+                        price:                  10,
+                        unity:                  'Kg',
+                        category:               'Verduras',
+                        image: {
+                            url:                config.resourcesPath + 'images/products/vegetables/pimiento_rojo.png'
+                        }
+                    },
+                    {
+                        id:                     22,
+                        name:                   'Pimiento verde',
+                        price:                  10,
+                        unity:                  'Kg',
+                        category:               'Verduras',
+                        image: {
+                            url:                config.resourcesPath + 'images/products/vegetables/pimiento_verde.png'
+                        }
+                    },
+                    {
+                        id:                     23,
+                        name:                   'Puerro',
+                        price:                  10,
+                        unity:                  'Kg',
+                        category:               'Verduras',
+                        image: {
+                            url:                config.resourcesPath + 'images/products/vegetables/puerro.png'
+                        }
+                    },
+                    {
+                        id:                     24,
+                        name:                   'Rabanos',
+                        price:                  10,
+                        unity:                  'Kg',
+                        category:               'Verduras',
+                        image: {
+                            url:                config.resourcesPath + 'images/products/vegetables/rabanos.png'
+                        }
+                    },
+                    {
+                        id:                     25,
+                        name:                   'Repollo',
+                        price:                  10,
+                        unity:                  'Kg',
+                        category:               'Verduras',
+                        image: {
+                            url:                config.resourcesPath + 'images/products/vegetables/repollo.png'
+                        }
+                    },
+                    {
+                        id:                     26,
                         name:                   'Tomatillo',
-                        description:            'El tomatillo sirve para...',
                         price:                  20,
                         unity:                  'Kg',
                         category:               'Verduras',
@@ -31,58 +269,13 @@ productsService.factory('productsFactory', function(config) {
                         }
                     },
                     {
-                        id:                     3,
-                        name:                   'Jitomate',
-                        description:            'El jitomate sirve para...',
-                        price:                  10,
+                        id:                     27,
+                        name:                   'Zanahoria',
+                        price:                  20,
                         unity:                  'Kg',
                         category:               'Verduras',
                         image: {
-                            url:                config.resourcesPath + 'images/products/vegetables/jitomate.png'
-                        }
-                    },
-                    {
-                        id:                     4,
-                        name:                   'Jitomate',
-                        description:            'El jitomate sirve para...',
-                        price:                  10,
-                        unity:                  'Kg',
-                        category:               'Verduras',
-                        image: {
-                            url:                config.resourcesPath + 'images/products/vegetables/jitomate.png'
-                        }
-                    },
-                    {
-                        id:                     5,
-                        name:                   'Jitomate',
-                        description:            'El jitomate sirve para...',
-                        price:                  10,
-                        unity:                  'Kg',
-                        category:               'Verduras',
-                        image: {
-                            url:                config.resourcesPath + 'images/products/vegetables/jitomate.png'
-                        }
-                    },
-                    {
-                        id:                     6,
-                        name:                   'Jitomate',
-                        description:            'El jitomate sirve para...',
-                        price:                  10,
-                        unity:                  'Kg',
-                        category:               'Verduras',
-                        image: {
-                            url:                config.resourcesPath + 'images/products/vegetables/jitomate.png'
-                        }
-                    },
-                    {
-                        id:                     7,
-                        name:                   'Jitomate',
-                        description:            'El jitomate sirve para...',
-                        price:                  10,
-                        unity:                  'Kg',
-                        category:               'Verduras',
-                        image: {
-                            url:                config.resourcesPath + 'images/products/vegetables/jitomate.png'
+                            url:                config.resourcesPath + 'images/products/vegetables/zanahoria.png'
                         }
                     }
                 ]

@@ -100,8 +100,8 @@ var productCategoryDirective = angular.module('productCategoryDirective', [
                     } else {
                         sortedProducts.push(innerArray);
                         innerArray = [];
-                        counter = 0;
                         innerArray.push(product);
+                        counter = 1;
                     }
                 }
                 sortedProducts.push(innerArray);

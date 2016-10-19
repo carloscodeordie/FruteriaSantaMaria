@@ -3,7 +3,7 @@ var productsModule = angular.module('productsModule', [
     'directivesModule',
     'servicesModule'
 ]);
-productsModule.controller('productsController', ['$scope', '$localStorage', 'productsService', function($scope, $localStorage, productsService) {
+productsModule.controller('productsController', ['$scope', '$localStorage', '$location', 'productsService', function($scope, $localStorage, $location, productsService) {
     
     // Method to add a product and quantity to cart
     var addProductToCart = function(event, product, quantity) {
@@ -60,27 +60,52 @@ productsModule.controller('productsController', ['$scope', '$localStorage', 'pro
         }
         // Remove the product it is in cart
         if(index !== undefined) {
-             $scope.$broadcast('restoreProduct', productCart);
+            $scope.$broadcast('restoreProduct', productCart);
             $scope.$storage.cart.splice(index, 1);
         }
     };
 
+    // Calculate the total price for all the products in the cart
+    var calculateTotal = function(cart) {
+        var total = 0;
+        for(i = 0; i < cart.length; i++) {
+            var product = cart[i];
+            var totalByProduct = product.price * product.quantity;
+            total = total + totalByProduct;
+        }
+        return total;
+    };
+
+    // Convert into a string the products into the cart
+    var serializeProducts = function(cart) {
+        var serializeProducts = '';
+        for(i = 0; i < cart.length; i++) {
+            var product = cart[i];
+            serializeProducts = serializeProducts + ' - ' + product.name + ': ' + product.quantity + ' ' + product.unity;
+        }
+        return serializeProducts;
+    };
+
     // Method to make an order
     var makeOrder = function(event, customer) {
+        
+        var total = calculateTotal($scope.$storage.cart);
+        var transformProducts = serializeProducts($scope.$storage.cart);
+
         emailjs.send("gmail", "order", 
             {
                 customerName:           customer.name, 
                 customerEmail:          customer.email,
                 customerAddress:        customer.address,
                 customerPhone:          customer.phone,
-                orderTime:              $scope.orderTime,
-                customerProducts:       $scope.$storage.cart
+                customerProducts:       transformProducts,
+                total:                  total
             })
             .then(function(response) {
-                console.log("SUCCESS", response);
+                $("#successModal").modal('show');
             },
             function(error) {
-                console.log("FAILED", error);
+                $("#errorModal").modal('show');
             }
         );
     };

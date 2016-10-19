@@ -8,5 +8,6 @@ var directivesModule = angular.module('directivesModule', [
     'productCategoryDirective',
     'cartDirective',
     'cartDetailDirective',
-    'orderModalDirective'
+    'orderModalDirective',
+    'successModalDirective'
 ]);

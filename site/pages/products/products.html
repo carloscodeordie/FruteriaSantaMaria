@@ -3,5 +3,17 @@
     <my-products categories="categories"></my-products>
     <my-cart cart="$storage.cart" id-modal="orderModal"></my-cart>
     <my-order-modal cart="$storage.cart" id-modal="orderModal" title="Ingrese sus datos"></my-order-modal>
+    <my-success-modal
+        id-modal="successModal"
+        title="Woohoooo!, su orden ha sido completada!!"
+        content="Agradecemos su preferencia" 
+        path="home">
+    </my-success-modal>
+    <my-success-modal
+        id-modal="errorModal"
+        title="Error al crear la orden"
+        content="Lo sentimos, hub" 
+        path="home">
+    </my-success-modal>    
     <my-footer></my-footer>
 </section>

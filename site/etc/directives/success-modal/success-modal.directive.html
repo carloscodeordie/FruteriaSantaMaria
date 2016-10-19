@@ -1,0 +1,17 @@
+<section class="my-success-modal-directive">
+    <div id="{{idModal}}" class="modal" tabindex="-1" role="dialog" aria-labelledby="successModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="successModalLabel" ng-bind="title"></h4>
+                </div>
+                <div class="modal-body">
+                    <p ng-bind="content"></p>
+                </div>
+                <div class="modal-footer">
+                    <button ng-click="goPath()" type="button" class="btn btn-primary">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

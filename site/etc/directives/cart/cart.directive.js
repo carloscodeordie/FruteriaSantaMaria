@@ -7,11 +7,19 @@ var cartDirective = angular.module('cartDirective', [
         restrict:                       'E',
         scope: {
             cart:                       '=',
-            idModal:                    '@',
-            orderTime:                  '='
+            idModal:                    '@'
         },
         templateUrl:                    config.etcPath + 'directives/cart/cart.directive.html',
         controller:                     function($scope, config) {
+            
+            // Get the total of products in the cart
+            $scope.getTotalCart = function() {
+                var total = 0;
+                if($scope.cart) {
+                    total =  $scope.cart.length;
+                }
+                return total;
+            };
             // Enables or disable the checkout button
             $scope.validateProducts = function() {
                 var flag = true;

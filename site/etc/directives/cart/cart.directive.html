@@ -2,7 +2,8 @@
     <div class="icon-cart-container">
         <div class="pull-right">
             <div class="icon" ng-click="toggleCart()">
-                <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>
+                <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true" ng-class="{'open': isCartShowed}"></span>
+                <span class="total" ng-bind="getTotalCart()"></span>
             </div>
         </div>
     </div>
@@ -22,14 +23,6 @@
                         <span>{{cart | totalCart | currency}}</span>
                     </button>
                 </div>
-            </div>
-            <div class="calendar">
-                <form>
-                    <div class="form-group">
-                        <span>Hora de entrega:</span>
-                        <input ng-model="orderTime" type="text" class="form-control" placeholder="Ej: 1:30 PM">
-                    </div>
-                </form>
             </div>
         </div>
         <div class="items">

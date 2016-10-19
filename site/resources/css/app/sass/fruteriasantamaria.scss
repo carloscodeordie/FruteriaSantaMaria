@@ -534,9 +534,22 @@ my-cart {
             .icon {
                 margin: 20px 30px;
                 cursor: pointer;
+                position: relative;
                 .glyphicon {
                     font-size: 40px;
-                    color: #EE5189;
+                    color: $pink-opacity-color;
+                }
+                .glyphicon.open {
+                    color: $pink-light-color;
+                }
+                .total {
+                    position: absolute;
+                    top: 7px;
+                    left: 18px;
+
+                    font-family: 'Roboto', sans-serif;
+                    font-size: 14px;
+                    color: $inverse-color;
                 }
             }
         }

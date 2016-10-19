@@ -27,7 +27,7 @@
                 <form>
                     <div class="form-group">
                         <span>Hora de entrega:</span>
-                        <input type="text" class="form-control" placeholder="Ej: 1:30 PM">
+                        <input ng-model="orderTime" type="text" class="form-control" placeholder="Ej: 1:30 PM">
                     </div>
                 </form>
             </div>
@@ -39,7 +39,14 @@
             <my-cart-detail product="product" ng-repeat="product in cart"></my-cart-detail>
         </div>
         <div class="checkout">
-            <button type="button" class="btn btn-lg btn-block checkout">Hacer pedido</button>
+            <button
+                ng-disabled="validateProducts()"
+                type="button"
+                class="btn btn-lg btn-block checkout"
+                data-toggle="modal" 
+                data-target="#{{idModal}}">
+                    <span>Realizar pedido</span>
+            </button>
         </div>
     </div>
 </section>

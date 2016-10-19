@@ -7,7 +7,7 @@
                 <div class="carousel-inner" role="listbox">
                     <div class="item" ng-repeat="products in sortedProducts track by $index" ng-class="{'active': isFirstElement($index)}">
                         <div class="row-fluid">
-                            <div class="col-md-2" ng-repeat="product in products" ng-class="{'col-md-offset-1': isFirstElement($index)}">
+                            <div class="col-md-2 col-xs-6" ng-repeat="product in products" ng-class="{'col-md-offset-2': isFirstElement($index)}">
                                 <div class="product-container">
                                     <div class="product-image">
                                         <img class="img-responsive" ng-src="{{product.image.url}}">

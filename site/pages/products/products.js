@@ -65,6 +65,26 @@ productsModule.controller('productsController', ['$scope', '$localStorage', 'pro
         }
     };
 
+    // Method to make an order
+    var makeOrder = function(event, customer) {
+        emailjs.send("gmail", "order", 
+            {
+                customerName:           customer.name, 
+                customerEmail:          customer.email,
+                customerAddress:        customer.address,
+                customerPhone:          customer.phone,
+                orderTime:              $scope.orderTime,
+                customerProducts:       $scope.$storage.cart
+            })
+            .then(function(response) {
+                console.log("SUCCESS", response);
+            },
+            function(error) {
+                console.log("FAILED", error);
+            }
+        );
+    };
+
     // Initialization of channels
     var initChannels = function() {
         // listen for the event when a product is added
@@ -73,6 +93,8 @@ productsModule.controller('productsController', ['$scope', '$localStorage', 'pro
         $scope.$on('removeProductEmit', removeProductToCart);
         // listen for the event when a product is removed completely
         $scope.$on('removeCompleteProductEmit', removeCompleteProductToCart);
+        // listen for the event when an order is created
+        $scope.$on('makeOrderEmit', makeOrder);
     };
 
     // Initialization of local storage

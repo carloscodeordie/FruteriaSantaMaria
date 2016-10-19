@@ -6,10 +6,20 @@ var cartDirective = angular.module('cartDirective', [
     return {
         restrict:                       'E',
         scope: {
-            cart:                       '='
+            cart:                       '=',
+            idModal:                    '@',
+            orderTime:                  '='
         },
         templateUrl:                    config.etcPath + 'directives/cart/cart.directive.html',
         controller:                     function($scope, config) {
+            // Enables or disable the checkout button
+            $scope.validateProducts = function() {
+                var flag = true;
+                if($scope.cart.length > 0) {
+                    flag = false;
+                }
+                return flag;
+            };
             // Shows or hide the cart
             $scope.toggleCart = function() {
                 $scope.isCartShowed = !$scope.isCartShowed;

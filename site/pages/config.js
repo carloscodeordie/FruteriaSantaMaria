@@ -12,7 +12,7 @@ var appConfig = angular.module('appConfig', [])
 	config.home = '/home';
 	config.products = '/productos';
 	config.recetas = '/recetas';
-	config.sortProducts = 5;
+	config.sortProducts = 4;
 	
 	this.$get = function() {
 		return config;

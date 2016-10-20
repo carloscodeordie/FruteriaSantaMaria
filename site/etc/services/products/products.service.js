@@ -279,6 +279,271 @@ productsService.factory('productsFactory', function(config) {
                         }
                     }
                 ]
+            },
+            {
+                name:                           'Frutas',
+                products: [
+                    {
+                        id:                     28,
+                        name:                   'Ciruela',
+                        price:                  10,
+                        unity:                  'Kg',
+                        category:               'Verduras',
+                        image: {
+                            url:                config.resourcesPath + 'images/products/fruits/ciruela.png'
+                        }
+                    },
+                    {
+                        id:                     29,
+                        name:                   'Coco',
+                        price:                  10,
+                        unity:                  'Kg',
+                        category:               'Verduras',
+                        image: {
+                            url:                config.resourcesPath + 'images/products/fruits/coco.png'
+                        }
+                    },
+                    {
+                        id:                     30,
+                        name:                   'Dátil',
+                        price:                  10,
+                        unity:                  'Kg',
+                        category:               'Verduras',
+                        image: {
+                            url:                config.resourcesPath + 'images/products/fruits/datil.png'
+                        }
+                    },
+                    {
+                        id:                     31,
+                        name:                   'Durazno',
+                        price:                  10,
+                        unity:                  'Kg',
+                        category:               'Verduras',
+                        image: {
+                            url:                config.resourcesPath + 'images/products/fruits/durazno.png'
+                        }
+                    },
+                    {
+                        id:                     32,
+                        name:                   'Frambuesa',
+                        price:                  10,
+                        unity:                  'Kg',
+                        category:               'Verduras',
+                        image: {
+                            url:                config.resourcesPath + 'images/products/fruits/frambuesa.png'
+                        }
+                    },
+                    {
+                        id:                     33,
+                        name:                   'Fresa',
+                        price:                  10,
+                        unity:                  'Kg',
+                        category:               'Verduras',
+                        image: {
+                            url:                config.resourcesPath + 'images/products/fruits/fresa.png'
+                        }
+                    },
+                    {
+                        id:                     34,
+                        name:                   'Granada',
+                        price:                  10,
+                        unity:                  'Kg',
+                        category:               'Verduras',
+                        image: {
+                            url:                config.resourcesPath + 'images/products/fruits/granada.png'
+                        }
+                    },
+                    {
+                        id:                     35,
+                        name:                   'Guanabana',
+                        price:                  10,
+                        unity:                  'Kg',
+                        category:               'Verduras',
+                        image: {
+                            url:                config.resourcesPath + 'images/products/fruits/guanabana.png'
+                        }
+                    },
+                    {
+                        id:                     36,
+                        name:                   'Higo',
+                        price:                  10,
+                        unity:                  'Kg',
+                        category:               'Verduras',
+                        image: {
+                            url:                config.resourcesPath + 'images/products/fruits/higo.png'
+                        }
+                    },
+                    {
+                        id:                     37,
+                        name:                   'Kiwi',
+                        price:                  10,
+                        unity:                  'Kg',
+                        category:               'Verduras',
+                        image: {
+                            url:                config.resourcesPath + 'images/products/fruits/kiwi.png'
+                        }
+                    },
+                    {
+                        id:                     38,
+                        name:                   'Lima',
+                        price:                  10,
+                        unity:                  'Kg',
+                        category:               'Verduras',
+                        image: {
+                            url:                config.resourcesPath + 'images/products/fruits/lima.png'
+                        }
+                    },
+                    {
+                        id:                     39,
+                        name:                   'Limón',
+                        price:                  10,
+                        unity:                  'Kg',
+                        category:               'Verduras',
+                        image: {
+                            url:                config.resourcesPath + 'images/products/fruits/limon.png'
+                        }
+                    },
+                    {
+                        id:                     40,
+                        name:                   'Mandarina',
+                        price:                  10,
+                        unity:                  'Kg',
+                        category:               'Verduras',
+                        image: {
+                            url:                config.resourcesPath + 'images/products/fruits/mandarina.png'
+                        }
+                    },
+                    {
+                        id:                     41,
+                        name:                   'Mango',
+                        price:                  10,
+                        unity:                  'Kg',
+                        category:               'Verduras',
+                        image: {
+                            url:                config.resourcesPath + 'images/products/fruits/mango.png'
+                        }
+                    },
+                    {
+                        id:                     42,
+                        name:                   'Manzana',
+                        price:                  10,
+                        unity:                  'Kg',
+                        category:               'Verduras',
+                        image: {
+                            url:                config.resourcesPath + 'images/products/fruits/manzana.png'
+                        }
+                    },
+                    {
+                        id:                     43,
+                        name:                   'Melón',
+                        price:                  10,
+                        unity:                  'Kg',
+                        category:               'Verduras',
+                        image: {
+                            url:                config.resourcesPath + 'images/products/fruits/melon.png'
+                        }
+                    },
+                    {
+                        id:                     44,
+                        name:                   'Membrillo',
+                        price:                  10,
+                        unity:                  'Kg',
+                        category:               'Verduras',
+                        image: {
+                            url:                config.resourcesPath + 'images/products/fruits/membrillo.png'
+                        }
+                    },
+                    {
+                        id:                     45,
+                        name:                   'Naranja',
+                        price:                  10,
+                        unity:                  'Kg',
+                        category:               'Verduras',
+                        image: {
+                            url:                config.resourcesPath + 'images/products/fruits/naranja.png'
+                        }
+                    },
+                    {
+                        id:                     46,
+                        name:                   'Papaya',
+                        price:                  10,
+                        unity:                  'Kg',
+                        category:               'Verduras',
+                        image: {
+                            url:                config.resourcesPath + 'images/products/fruits/papaya.png'
+                        }
+                    },
+                    {
+                        id:                     47,
+                        name:                   'Pera',
+                        price:                  10,
+                        unity:                  'Kg',
+                        category:               'Verduras',
+                        image: {
+                            url:                config.resourcesPath + 'images/products/fruits/pera.png'
+                        }
+                    },
+                    {
+                        id:                     48,
+                        name:                   'Persimmon',
+                        price:                  10,
+                        unity:                  'Kg',
+                        category:               'Verduras',
+                        image: {
+                            url:                config.resourcesPath + 'images/products/fruits/persimmon.png'
+                        }
+                    },
+                    {
+                        id:                     49,
+                        name:                   'Piña',
+                        price:                  10,
+                        unity:                  'Kg',
+                        category:               'Verduras',
+                        image: {
+                            url:                config.resourcesPath + 'images/products/fruits/piña.png'
+                        }
+                    },
+                    {
+                        id:                     50,
+                        name:                   'Platano',
+                        price:                  10,
+                        unity:                  'Kg',
+                        category:               'Verduras',
+                        image: {
+                            url:                config.resourcesPath + 'images/products/fruits/platano.png'
+                        }
+                    },
+                    {
+                        id:                     51,
+                        name:                   'Sandia',
+                        price:                  10,
+                        unity:                  'Kg',
+                        category:               'Verduras',
+                        image: {
+                            url:                config.resourcesPath + 'images/products/fruits/sandia.png'
+                        }
+                    },
+                    {
+                        id:                     52,
+                        name:                   'Toronja',
+                        price:                  10,
+                        unity:                  'Kg',
+                        category:               'Verduras',
+                        image: {
+                            url:                config.resourcesPath + 'images/products/fruits/toronja.png'
+                        }
+                    },
+                    {
+                        id:                     53,
+                        name:                   'Uva',
+                        price:                  10,
+                        unity:                  'Kg',
+                        category:               'Verduras',
+                        image: {
+                            url:                config.resourcesPath + 'images/products/fruits/uva.png'
+                        }
+                    }
+                ]
             }
         ]
     };

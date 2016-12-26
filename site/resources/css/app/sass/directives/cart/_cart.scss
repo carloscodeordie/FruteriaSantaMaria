@@ -1,0 +1,80 @@
+// Import mixins
+@import '../../mixins/absolute-position';
+
+// Styles for myCart directive
+my-cart {
+    .my-cart-directive {
+        .icon-cart-container {
+            .icon {
+                margin: 20px 30px;
+                cursor: pointer;
+                position: relative;
+                .glyphicon {
+                    font-size: 40px;
+                    color: $pink-opacity-color;
+                }
+                .glyphicon.open {
+                    color: $pink-light-color;
+                }
+                .total {
+                    position: absolute;
+                    top: 7px;
+                    left: 18px;
+
+                    font-family: 'Roboto', sans-serif;
+                    font-size: 14px;
+                    color: $inverse-color;
+                }
+            }
+        }
+        @include absolute-position-mixin;
+        .cart-container {
+            border: 1px solid $gray-bold-color;
+            .resume {
+                background-color: $gray-bold-color;
+                padding: 5px 10px;
+                .clearfix {
+                    margin-bottom: 10px;
+                    .header {
+                        .badge {
+                            font-size: 13px;
+                            background-color: $gray-light-color;
+                        }
+                        .title {
+                            color: $inverse-color;
+                            font-family: 'PT Sans', sans-serif;
+                        }
+                    }
+                    .btn.checkout {
+                        background-color: $gray-light-color;
+                        color: $inverse-color;
+                    }
+                }
+                .calendar {
+                    font-family: 'PT Sans', sans-serif;
+                    color: $inverse-color;
+                }
+            }
+            .items {
+                padding: 10px;
+                background-color: $inverse-color;
+                min-height: 275px;
+                height: 275px;
+                overflow-y: auto;
+                overflow-x: hidden;
+                .promotion {
+                    font-family: 'PT Sans', sans-serif;
+                    color: $gray-bold-color;
+                }
+            }
+            .checkout {
+                padding: 10px;
+                background-color: $inverse-color;
+                .checkout {
+                    background-color: $orange-color;
+                    color: $inverse-color;
+                }
+            }
+        }
+    }
+}

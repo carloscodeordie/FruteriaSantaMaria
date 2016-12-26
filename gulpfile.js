@@ -84,7 +84,7 @@ gulp.task('process-directive-pages', function() {
 
 gulp.task('process-site-styles', function() {
     util.log('FRUTERIA SANTA MARIA -> Running process-site-styles task...');
-    return sass(SITE_FOLDER + '/resources/css/app/sass/fruteriasantamaria.scss')
+    return sass(SITE_FOLDER + '/resources/css/app/sass/**/*.scss')
         .on('error', sass.logError)
         .pipe(autoprefixer('last 2 version'))
         .pipe(gulp.dest(DIST_FOLDER + '/resources/css'))

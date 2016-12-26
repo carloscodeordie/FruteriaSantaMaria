@@ -1,0 +1,7 @@
+@mixin stretch-image-mixin($url, $height) {
+    // Make an image stretch
+    background-image: url($url);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    height: $height;
+}

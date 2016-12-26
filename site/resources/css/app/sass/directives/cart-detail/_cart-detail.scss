@@ -1,0 +1,18 @@
+// Styles for myCartDetail directive
+my-cart-detail {
+    .my-cart-detail-directive {
+        border-bottom: 1px solid $gray-bold-color;
+        .cart-detail-container {
+            padding: 5px 0;
+            img {
+                height: 35px;
+            }
+            .remove-icon {
+                span {
+                    color: $red-color;
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+}

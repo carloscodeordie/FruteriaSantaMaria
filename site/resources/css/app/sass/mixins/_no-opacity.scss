@@ -1,0 +1,6 @@
+@mixin no-opacity-mixin {
+    // Change opacity
+    opacity: 1.0;
+    transition: all 0.25s ease-in-out;
+    cursor: pointer;
+}

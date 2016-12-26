@@ -1,0 +1,9 @@
+@mixin nav-font-mixin {
+    // Change font family of Bootstrap's navbar-brand
+    font-family: 'Roboto';
+    font-size: 13px;
+    font-weight: 900;
+
+    // Change color of Bootstrap's navbar-brand
+    color: $inverse-color;
+}

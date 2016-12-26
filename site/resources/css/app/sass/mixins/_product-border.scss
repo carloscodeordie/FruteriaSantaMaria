@@ -1,0 +1,5 @@
+@mixin product-border-mixin {
+    border-top: $border-color 1px solid;
+    border-left: $border-color 1px solid;
+    border-bottom: $border-color 1px solid;
+}

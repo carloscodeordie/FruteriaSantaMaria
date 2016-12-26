@@ -1,0 +1,66 @@
+// Import mixins
+@import '../../mixins/callout';
+
+// Styles for myRecommendations directive
+my-recommendations {
+    .my-recommendations-directive {
+        background: $recommendation-color;
+        .container {
+            padding-bottom: 20px;
+            .title {
+                margin-bottom: 3rem;
+                h1 {
+                    font-family: 'Dosis', sans-serif;
+                    font-weight: 700;
+                }
+            }
+            .callout {
+                @include callout_mixin;
+
+                border-color: $recommendation-color;
+                
+                .profile {
+                    .name {
+                        font-family: 'Pacifico', sans-serif;
+                        color: $pink-bold-color;
+                    }
+                    .company {
+                        font-family: 'Dosis', sans-serif;
+                        font-size: 17px;
+                    }
+                    .thumbnail {
+                        width: 250px;
+                        height: 250px;
+                        border-radius: 100px;
+                        border: none;
+                        margin: 0 auto;
+                    }
+                }
+                .comments {
+                    margin-top: 25px;
+                    .lead {
+                        font-family: 'Dosis', sans-serif;
+                        font-weight: 700;
+                    }
+                    .scrollable-container {
+                        overflow-y: auto;
+                        max-height: 125px;
+                        .subheader {
+                            font-family: 'Dosis', sans-serif;
+                            font-size: 19px;
+                        }
+                    }
+                }
+                .site {
+                    a {
+                        margin-top: 20px;
+                        margin-bottom: 10px;
+                        
+                        background-color: $pink-light-color;
+                        border: $pink-bold-color 1px solid;
+                    }   
+                }
+            }
+        }
+    }
+}

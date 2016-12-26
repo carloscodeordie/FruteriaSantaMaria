@@ -1,0 +1,4 @@
+@mixin font-color-mixin($color) {
+    // Change font color
+    color: $color;
+}

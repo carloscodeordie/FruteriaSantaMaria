@@ -1,0 +1,8 @@
+@mixin callout_mixin() {
+    background-color: $inverse-color;
+    margin: 0 0 1rem 0;
+    padding: 1rem 2rem;
+    position: relative;
+    color: #0a0a0a;
+    border-radius: 5px;
+}

@@ -1,0 +1,124 @@
+// Import mixins
+@import '../../mixins/no-container-paddings';
+@import '../../mixins/stretch-image';
+@import '../../mixins/search-button';
+@import '../../mixins/opacity';
+@import '../../mixins/no-opacity';
+@import '../../mixins/pink-button';
+
+// Styles for myPresentation directive
+my-presentation {
+    .my-presentation-directive {
+        // Add a top margin due fixed navbar
+        margin-top: 35px;
+        .container-fluid {
+
+            // Remove paddings of Bootstrap's container
+            @include no-container-paddings-mixin;
+
+            .presentation-container {
+                
+                /* Extra small devices */
+                @media (max-width: $small-devices) {
+                    // Stretch the presentation image
+                    @include stretch-image-mixin("../images/presentation/salad.jpg", 500px);
+                }
+
+                /* Small devices */
+                @media (min-width: $small-devices) {
+                    // Stretch the presentation image
+                    @include stretch-image-mixin("../images/presentation/salad.jpg", 650px);
+                }
+
+                /* Medium devices */
+                @media (min-width: $medium-devices) {
+                    // Stretch the presentation image
+                    @include stretch-image-mixin("../images/presentation/salad.jpg", 650px);
+                }
+
+                /* Large devices */
+                @media (min-width: $large-devices) {
+                    // Stretch the presentation image
+                    @include stretch-image-mixin("../images/presentation/salad.jpg", 650px);
+                }
+                
+                .jumbotron {
+                    // Makes transparent the Bootstrap's Jumbotron background color
+                    background-color: transparent;
+                    .navbar {
+                        // Add padding top for inner navbar
+                        padding-top: 20px;
+
+                        .navbar-header {
+                            .navbar-brand {
+                                .my-logo {
+                                    // Move position of logo
+                                    margin-top: -70px;
+                                    margin-left: -20px;
+                                }
+                            }
+                        }
+                        #presentation-navbar {
+                            .nav.navbar-nav {
+                                .my-search {
+                                    // Change position of search button
+                                    margin-top: 20px;
+                                    
+                                    // Change size and color of search button 
+                                    @include search-button-mixin;
+
+                                    // Add opacity
+                                    @include opacity-mixin;
+                                    
+                                }
+
+                                .my-search:hover {
+                                    // Add opacity effects
+                                    @include no-opacity-mixin;
+                                }
+                            }
+                        }
+                    }
+                    .presentation-content {
+                        
+                        /* Extra small devices */
+                        @media (max-width: $small-devices) {
+                            // Shows content at bottom
+                            margin-top: 20px;
+                        }
+                        
+                        /* Small devices */
+                        @media (min-width: $small-devices) {
+                            // Shows content at bottom
+                            margin-top: 200px;
+                        }
+
+                        /* Medium devices */
+                        @media (min-width: $medium-devices) {
+                            // Shows content at bottom
+                            margin-top: 200px;
+                        }
+                        
+                        h1 {
+                            font-family: 'Dosis', sans-serif;
+                            font-weight: 700;
+                            color: $pink-bold-color;
+                        }
+
+                        .presentation-description {
+                            color: $inverse-color;
+                            font-weight: bold;
+                        }
+
+                        .btn {
+                            @include pink-button-mixin;
+                            padding-left: 40px;
+                            padding-right: 40px;
+                        }
+                    }
+                }
+            }
+        }
+        
+    }
+}

@@ -1,0 +1,6 @@
+@mixin services-font-mixin() {
+    background-color: $pink-opacity-color;
+    color: $inverse-color;
+    font-family: 'Pacifico', sans-serif;
+    opacity: 0.8;
+}

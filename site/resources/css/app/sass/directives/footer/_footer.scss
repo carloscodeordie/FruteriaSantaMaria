@@ -1,0 +1,55 @@
+// Import mixins
+
+// Styles for myFooter directive
+my-footer {
+    .my-footer-directive {
+        background-color: $footer-color;
+        color: $inverse-color;
+        font-family: 'Roboto', sans-serif;
+        font-size: 12px;
+
+        .container {
+            padding-top: 40px;
+            padding-bottom: 0px;
+            .row {
+                .columna {
+                    border: $pink-light-color 1px solid;
+                    height: 130px;
+                    padding: 10px 20px;
+                    .subtitle {
+                        font-weight: 900;
+                        font-size: 14px;
+                        color: $pink-bold-color;
+                    }
+                    .logo {
+                        height: 100px;
+                        margin: 5px auto;
+                    }
+                    .link {
+                        color: $inverse-color;
+                    }
+                }
+                /* Medium devices */
+                @media (min-width: $medium-devices) {
+                    .columna:first-child {
+                        border-right: none;
+                    }
+                    .columna:last-child {
+                        border-left: none;
+                    }
+                }
+            }
+            /* Medium devices */
+            @media (min-width: $medium-devices) {
+                .row.ultima {
+                    .columna {
+                        border-top: none;
+                    }
+                }
+            }
+            .copyright {
+                margin-top: 10px;
+            }
+        }
+    }
+}

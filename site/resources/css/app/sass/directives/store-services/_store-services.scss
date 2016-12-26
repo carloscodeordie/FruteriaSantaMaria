@@ -1,0 +1,55 @@
+// Import mixins
+@import '../../mixins/services-font';
+
+// Styles for myStoreServices directive
+my-store-services {
+    .my-services-directive {
+        .jumbotron {
+            background-color: transparent;
+            margin-top: -150px;
+            margin-bottom: 0;
+            padding-bottom: 0;
+
+            .container {
+
+                // padding around store services blocks
+                padding: 30px;
+                background-color: $inverse-color;
+
+                .service-container {
+                    position: relative;
+                    h1 {
+                        // Make header appears inside the image
+                        position: absolute;
+                        width: 100%;
+                        
+                        // Change services fonts
+                        @include services-font-mixin;
+
+                        /* Extra small devices */
+                        @media (max-width: $small-devices) {
+                            // Shows content at bottom
+                            margin-top: 70px;
+                        }
+                        
+                        /* Small devices */
+                        @media (min-width: $small-devices) {
+                            // Shows content at bottom
+                            margin-top: 200px;
+                        }
+
+                        /* Medium devices */
+                        @media (min-width: $medium-devices) {
+                            // Shows content at bottom
+                            margin-top: 150px;
+                        }
+                        
+                    }
+                    img {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}

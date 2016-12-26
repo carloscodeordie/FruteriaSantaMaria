@@ -1,5 +1,6 @@
 var navbarDirective = angular.module('navbarDirective', [
     'appConfig',
+    'facebookShareButtonDirective',
     'generalService'
 ])
 .directive('myNavbar', function(config) {

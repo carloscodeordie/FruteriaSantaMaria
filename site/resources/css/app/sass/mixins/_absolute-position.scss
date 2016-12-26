@@ -1,0 +1,7 @@
+@mixin absolute-position-mixin {
+    position: fixed;
+    top: 36px;
+    right: 0;
+    width: 350px;
+    z-index: 1000;
+}

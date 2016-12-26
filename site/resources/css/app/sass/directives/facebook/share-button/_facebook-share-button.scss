@@ -1,0 +1,14 @@
+// Styles for myFacebookShareButton directive
+my-facebook-share-button {
+    .my-share-button-directive {
+        .fb-like {
+            position: fixed;
+            top: 45px;
+            padding-left: 10px;
+            z-index: 1000;
+        }
+        .fb-like.right {
+            right: 10px;
+        }
+    }
+}

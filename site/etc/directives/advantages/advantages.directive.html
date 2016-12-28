@@ -1,0 +1,21 @@
+<section class="my-advantages-directive">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4" ng-repeat="advantage in advantages">
+                <div class="advantage-container">
+                    <div class="header">
+                        <div class="text-center">
+                            <img ng-src="{{advantage.image.url}}">
+                        </div> 
+                    </div>
+                    <div class="content">
+                        <div class="text-center">
+                            <h4 ng-bind="advantage.title"></h4>
+                        </div>
+                        <p ng-bind="advantage.description"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

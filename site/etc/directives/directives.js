@@ -1,13 +1,15 @@
 var directivesModule = angular.module('directivesModule', [
-    'navbarDirective',
-    'presentationDirective',
-    'storeServicesDirective',
-    'recommendationsDirective',
-    'footerDirective',
-    'productsDirective',
-    'productCategoryDirective',
+    'advantagesDirective',
     'cartDirective',
     'cartDetailDirective',
+    'facebookShareButtonDirective',
+    'footerDirective',
+    'navbarDirective',
     'orderModalDirective',
+    'presentationDirective',
+    'productCategoryDirective',
+    'productsDirective',
+    'recommendationsDirective',
+    'storeServicesDirective',
     'successModalDirective'
 ]);

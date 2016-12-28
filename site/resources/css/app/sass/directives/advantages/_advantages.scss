@@ -1,0 +1,30 @@
+// Import mixins
+
+// Styles for myAdvantages directive
+my-advantages {
+    .my-advantages-directive {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        .advantage-container {
+            padding: 10px 10px 0 10px;
+
+            border: 1px solid $border-color;
+            border-radius: 3px;
+
+            background-color: $gray-light-color;
+            
+            .header {
+                img {
+                    height: 50px; 
+                }
+            }
+            .content {
+                height: 80px;
+                
+                h4 {
+                    color: $inverse-color;
+                }
+            }
+        }
+    }
+}

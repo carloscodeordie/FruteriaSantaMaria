@@ -10,6 +10,7 @@ $orange-color: #FAA519;
 $red-color: #CE221E;
 $footer-color: #222;
 $recommendation-color: #F199B8;
+$advantages-color: #AFAFAF;
 
 $small-devices: 768px;
 $medium-devices: 992px;
@@ -23,6 +24,7 @@ $project-path: absolute-path("..");
 @import 'https://fonts.googleapis.com/css?family=Pacifico';
 @import 'https://fonts.googleapis.com/css?family=PT+Sans';
 
+@import 'directives/advantages/advantages';
 @import 'directives/cart/cart';
 @import 'directives/cart-detail/cart-detail';
 @import 'directives/facebook/share-button/facebook-share-button';

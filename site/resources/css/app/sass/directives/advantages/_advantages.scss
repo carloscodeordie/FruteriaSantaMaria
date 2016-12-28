@@ -6,12 +6,12 @@ my-advantages {
         margin-top: 10px;
         margin-bottom: 10px;
         .advantage-container {
-            padding: 10px 10px 0 10px;
+            padding: 10px 40px;
 
             border: 1px solid $border-color;
             border-radius: 3px;
 
-            background-color: $gray-light-color;
+            background-color: $advantages-color;
             
             .header {
                 img {
@@ -19,12 +19,18 @@ my-advantages {
                 }
             }
             .content {
-                height: 80px;
+                height: 100px;
                 
                 h4 {
                     color: $inverse-color;
+                    font-family: Pacifico,sans-serif;
+                    font-size: 2.5rem;
                 }
             }
+        }
+        .advantage-container:hover {
+            cursor: pointer;
+            background-color: $gray-light-color;
         }
     }
 }

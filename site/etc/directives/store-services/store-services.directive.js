@@ -1,4 +1,4 @@
-var servicesDirective = angular.module('storeServicesDirective', [
+var storeServicesDirective = angular.module('storeServicesDirective', [
     'appConfig'
 ])
 .directive('myStoreServices', function(config) {
@@ -9,12 +9,7 @@ var servicesDirective = angular.module('storeServicesDirective', [
         },
         templateUrl:                    config.etcPath + 'directives/store-services/store-services.directive.html',
         controller:                     function($scope, config) {
-            // Initialization of data
-            var init = function() {
-                
-            };
-            // Run the init function when the controller loads
-            init();
+            
         }
     };
 });

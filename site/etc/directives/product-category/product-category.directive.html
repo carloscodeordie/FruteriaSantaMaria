@@ -28,7 +28,7 @@
                                             </button>
                                             <button class="btn btn-default" ng-click="addProduct(product)">
                                                 <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
-                                                <span>&nbsp;Agregar</span>
+                                                <span>&nbsp;{{messages.add}}</span>
                                             </button>
                                         </div>
                                     </div>
@@ -40,11 +40,11 @@
                 <!-- Controls -->
                 <a class="left carousel-control" href="#carousel-{{category.name | lowercase}}" role="button" data-slide="prev">
                     <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-                    <span class="sr-only">Previous</span>
+                    <span class="sr-only" ng-bind="messages.previous"></span>
                 </a>
                 <a class="right carousel-control" href="#carousel-{{category.name | lowercase}}" role="button" data-slide="next">
                     <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-                    <span class="sr-only">Next</span>
+                    <span class="sr-only" ng-bind="messages.next"></span>
                 </a>
             </div>
 

@@ -7,24 +7,24 @@
                 </a>
             </div>
             <div class="col-xs-12 col-md-5 columna">
-                <h4 class="subtitle">Frutería Santa María</h4>
-                <p>Ordena tu mandado desde el celular y te llegara a la hora que lo pidas.</p>
+                <h4 class="subtitle" ng-bind="messages.company"></h4>
+                <p ng-bind="messages.sloganDescription"></p>
             </div>
             <div class="col-xs-12 col-md-4 columna">
-                <h4 class="subtitle">Más links:</h4>
+                <h4 class="subtitle" ng-bind="messages.moreLinks"></h4>
                 <ul class="list-inline">
                     <li>
-                        <a class="link" ng-href="{{paths.productos}}">Productos</a>
+                        <a class="link" ng-href="{{paths.products}}" ng-bind="messages.products"></a>
                     </li>
                     <li>
-                        <a class="link" ng-href="{{paths.recetas}}">Recetas</a>
+                        <a class="link" ng-href="{{paths.recipes}}" ng-bind="messages.recipes"></a>
                     </li>
                 </ul>
             </div>
         </div>
         <div class="row ultima">
             <div class="col-xs-12 col-md-4 columna">
-                <h4 class="subtitle">Siguenos en:</h4>
+                <h4 class="subtitle" ng-bind="messages.followUs"></h4>
                 <ul class="list-inline">
                     <li>
                         <a ng-href="{{social.facebook.url}}">
@@ -38,30 +38,30 @@
                     </li>
                 </ul>
             </div>
-            <div class="col-xs-12 col-md-3 columna">
-                <h4 class="subtitle">Contactanos:</h4>
+            <div class="col-xs-12 col-md-5 columna">
+                <h4 class="subtitle" ng-bind="messages.contactUs"></h4>
                 <ul class="list-unstyled">
                     <li>
-                        <span>Telefono: </span>
+                        <span ng-bind="messages.phone"></span>&nbsp;
                         <a class="link" href="tel:{{store.phone}}">
                             <span ng-bind="store.phone"></span>
                         </a>
                     </li>
                     <li>
-                        <span>Email: </span>
+                        <span ng-bind="messages.email"></span>&nbsp;
                         <a class="link" href="mailto:{{store.email}}">
                             <span ng-bind="store.email"></span>
                         </a>
                     </li>
                 </ul>
             </div>
-            <div class="col-xs-12 col-md-5 columna">
+            <div class="col-xs-12 col-md-3 columna">
 
             </div>
         </div>
         <div class="row">
             <div class="copyright">
-                <p>Developed by @CodeOrDie</p>
+                <p ng-bind="messages.createdBy"></p>
             </div>
         </div>
     </div>

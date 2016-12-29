@@ -11,7 +11,6 @@ var cartDirective = angular.module('cartDirective', [
         },
         templateUrl:                    config.etcPath + 'directives/cart/cart.directive.html',
         controller:                     function($scope, config) {
-            
             // Get the total of products in the cart
             $scope.getTotalCart = function() {
                 var total = 0;
@@ -43,6 +42,7 @@ var cartDirective = angular.module('cartDirective', [
             // Initialization of default data
             var initValues = function() {
                 $scope.isCartShowed = false;
+                $scope.messages = config.messages;
             };
             // Initialization of data
             var init = function() {

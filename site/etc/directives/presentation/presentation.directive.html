@@ -21,10 +21,10 @@
                     </nav>
                     <div class="presentation-content">
                         <div class="text-right">
-                            <h1>Tu mandado a domicilio!</h1>
-                            <p class="presentation-description">Ordena tu mandado desde el celular y te llegara a la hora que lo pidas.</p>
+                            <h1 ng-bind="messages.slogan"></h1>
+                            <p class="presentation-description" ng-bind="messages.sloganDescription"></p>
                             <p>
-                                <a class="btn btn-lg btn-default" href="/index.html#productos" role="button">ORDENAR »</a>
+                                <a class="btn btn-lg btn-default" href="/index.html#productos" role="button" ng-bind="messages.order"></a>
                             </p>
                         </div>
                     </div>

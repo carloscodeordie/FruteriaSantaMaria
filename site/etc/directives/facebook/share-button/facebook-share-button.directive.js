@@ -1,4 +1,4 @@
-var navbarDirective = angular.module('facebookShareButtonDirective', [
+var facebookShareButtonDirective = angular.module('facebookShareButtonDirective', [
     'appConfig'
 ])
 .directive('myFacebookShareButton', function(config) {
@@ -9,9 +9,7 @@ var navbarDirective = angular.module('facebookShareButtonDirective', [
         },
         templateUrl:                    config.etcPath + 'directives/facebook/share-button/facebook-share-button.directive.html',
         controller:                     function($scope, config) {
-            $scope.isRightPosition = function() {
-                return $scope.rightPosition;
-            };
+            
         }
     };
 });

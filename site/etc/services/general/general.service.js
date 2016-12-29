@@ -27,20 +27,22 @@ generalService.factory('generalFactory', function(config) {
     factory.getPathsData = function() {
         return {
             home:           config.context + '#home',
-            productos:      config.context + '#productos',
-            recetas:        config.context + '#recetas'
+            products:       config.context + '#productos',
+            recipes:        config.context + '#recetas'
         };
     };
-    
     return factory;
 });
 generalService.service('generalService', function(generalFactory){
+    // Obtains the store information
     this.getStore = function() {
         return generalFactory.getStoreData();
     };
+    // Obtains the social media information
     this.getSocial = function() {
         return generalFactory.getSocialData();
     }
+    // Obtains the paths for application
     this.getPaths = function() {
         return generalFactory.getPathsData();
     }

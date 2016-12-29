@@ -1,6 +1,6 @@
 var navbarDirective = angular.module('navbarDirective', [
     'appConfig',
-    'facebookShareButtonDirective',
+    'directivesModule',
     'generalService'
 ])
 .directive('myNavbar', function(config) {
@@ -16,11 +16,16 @@ var navbarDirective = angular.module('navbarDirective', [
                 $scope.store = generalService.getStore();
                 $scope.social = generalService.getSocial();
             };
-            
+            // Initialization of values
+            var initValues = function() {
+                $scope.messages = config.messages;
+            };
             // Initialization of data
             var init = function() {
                 // Initialization of general data
                 initData();
+                // Initialization of values
+                initValues();
             };
             // Run the init function when the controller loads
             init();

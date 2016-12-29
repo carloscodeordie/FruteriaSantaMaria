@@ -9,29 +9,29 @@ advantagesService.factory('advantagesFactory', function(config) {
                 title:                  'Entrega a domicilio',
                 description:            'Te entregamos tu pedido a domicilio sin ningun costo extra y de manera rapida',
                 image: {
-                    url:                config.resourcesPath + 'images/advantages/envio.png'
+                    url:                config.resourcesPath + 'images/advantages/delivery.png'
                 }
             },
             {
                 title:                  'Precio',
                 description:            'Tenemos los mejores precios para ti de toda la colonia',
                 image: {
-                    url:                config.resourcesPath + 'images/advantages/precio.png'
+                    url:                config.resourcesPath + 'images/advantages/price.png'
                 }
             },
             {
                 title:                  'Recetas',
                 description:            'Unete a nuestra comunidad donde podras compartir y aprender deliciosas y recetas para ti y tu familia',
                 image: {
-                    url:                config.resourcesPath + 'images/advantages/recetas.png'
+                    url:                config.resourcesPath + 'images/advantages/recipes.png'
                 }
             }
         ]
     };
-    
     return factory;
 });
 advantagesService.service('advantagesService', function(advantagesFactory){
+    // Obtains all the advantages of the business
     this.all = function() {
         return advantagesFactory.getAdvantages();
     };

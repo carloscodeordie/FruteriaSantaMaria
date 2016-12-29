@@ -30,6 +30,7 @@ var orderModalDirective = angular.module('orderModalDirective', [
             var initValues = function() {
                 $scope.submitted = false;
                 $scope.customer = {};
+                $scope.messages = config.messages;
             };
             // Initialization of data
             var init = function() {

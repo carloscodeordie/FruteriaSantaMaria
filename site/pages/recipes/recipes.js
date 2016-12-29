@@ -1,8 +1,8 @@
-var recetasModule = angular.module('recetasModule', [
+var recipesModule = angular.module('recipesModule', [
     'directivesModule',
     'servicesModule'
 ]);
-recetasModule.controller('recetasController', ['$scope', function($scope) {
+recipesModule.controller('recipesController', ['$scope', function($scope) {
     
     // Initialization of data
     var init = function() {

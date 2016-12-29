@@ -547,10 +547,10 @@ productsService.factory('productsFactory', function(config) {
             }
         ]
     };
-    
     return factory;
 });
 productsService.service('productsService', function(productsFactory){
+    // Obtains all the products separated by category
     this.getProductsByCategory = function() {
         return productsFactory.getProductsByCategory();
     };

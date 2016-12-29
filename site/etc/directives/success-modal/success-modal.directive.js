@@ -21,11 +21,21 @@ var successModalDirective = angular.module('successModalDirective', [
                 });
                 $(modalId).modal('hide');
             };
-
             // Method that redirects to page indicated in path scope variable
             $scope.goPath = function () {
                 hideModal();
             };
+            // Initialization of values
+            var initValues = function() {
+                $scope.messages = config.messages;
+            };
+            // Initialization of data
+            var init = function() {
+                // Initialization of values
+                initValues();
+            };
+            // Run the init function when the controller loads
+            init();
         }
     };
 });

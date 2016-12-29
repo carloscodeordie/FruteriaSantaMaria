@@ -18,7 +18,7 @@ recommendersService.factory('recommendersFactory', function(config) {
                     url:            config.resourcesPath + 'images/recommenders/frame.png'
                 },
                 site: {
-                    url:            ''
+                    url:            'http://facebook.com'
                 }
             },
             {
@@ -34,7 +34,7 @@ recommendersService.factory('recommendersFactory', function(config) {
                     url:            config.resourcesPath + 'images/recommenders/frame.png'
                 },
                 site: {
-                    url:            ''
+                    url:            'http://facebook.com'
                 }
             },
             {
@@ -50,19 +50,19 @@ recommendersService.factory('recommendersFactory', function(config) {
                     url:            config.resourcesPath + 'images/recommenders/frame.png'
                 },
                 site: {
-                    url:            ''
+                    url:            'http://facebook.com'
                 }
             }
         ]
     };
-    
     return factory;
 });
 recommendersService.service('recommendersService', function(recommendersFactory){
+    // Obtains all the recommenders
     this.all = function() {
         return recommendersFactory.getRecommenders();
     };
-
+    // Obtains only the newest recommenders using the size
     this.newest = function(size) {
         var recommenders = recommendersFactory.getRecommenders();
         var newest = recommenders.splice((size * -1), size);

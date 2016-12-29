@@ -3,7 +3,7 @@ var routerModule = angular.module('routerModule', [
 	'ngRoute',
     'homeModule',
 	'productsModule',
-	'recetasModule'
+	'recipesModule'
 ]);
 
 routerModule.config(['configProvider', '$routeProvider', '$locationProvider', 
@@ -17,9 +17,9 @@ routerModule.config(['configProvider', '$routeProvider', '$locationProvider',
 				templateUrl:    configProvider.pagesPath + '/products/products.html',
                 controller:     'productsController'
 			})
-			.when(configProvider.recetas, {
-				templateUrl:    configProvider.pagesPath + '/recetas/recetas.html',
-                controller:     'recetasController'
+			.when(configProvider.recipes, {
+				templateUrl:    configProvider.pagesPath + '/recipes/recipes.html',
+                controller:     'recipesController'
 			})
             .otherwise({
 				redirectTo: configProvider.home

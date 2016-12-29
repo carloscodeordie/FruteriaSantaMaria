@@ -16,11 +16,16 @@ var footerDirective = angular.module('footerDirective', [
                 $scope.social = generalService.getSocial();
                 $scope.paths = generalService.getPaths();
             };
-            
+            // Initialization of values
+            var initValues = function() {
+                $scope.messages = config.messages;
+            };
             // Initialization of data
             var init = function() {
                 // Initialization of general data
                 initData();
+                // Initialization of values
+                initValues();
             };
             // Run the init function when the controller loads
             init();

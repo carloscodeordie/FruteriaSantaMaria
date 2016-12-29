@@ -13,9 +13,7 @@
                 <div>
                     <h4 class="header">
                         <span class="badge">{{cart | totalProducts | number}}</span>
-                        <strong class="title">
-                            Frutería Santa María
-                        </strong>
+                        <strong class="title" ng-bind="messages.company"></strong>
                     </h4>
                 </div>
                 <div>
@@ -27,7 +25,7 @@
         </div>
         <div class="items">
             <div class="promotion">
-                <strong>Tu envio es gratis!</strong>
+                <strong ng-bind="messages.delivery"></strong>
             </div>
             <my-cart-detail product="product" ng-repeat="product in cart"></my-cart-detail>
         </div>
@@ -38,7 +36,7 @@
                 class="btn btn-lg btn-block checkout"
                 data-toggle="modal" 
                 data-target="#{{idModal}}">
-                    <span>Realizar pedido</span>
+                    <span ng-bind="messages.checkoutButton"></span>
             </button>
         </div>
     </div>

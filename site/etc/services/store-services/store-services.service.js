@@ -13,7 +13,7 @@ storeServicesService.factory('storeServicesFactory', function(config, generalSer
                     url:            config.resourcesPath + 'images/store-services/frutas_y_verduras.jpg'
                 },
                 path: {
-                    url:            generalService.getPaths().productos
+                    url:            generalService.getPaths().products
                 }
             },
             {
@@ -23,15 +23,15 @@ storeServicesService.factory('storeServicesFactory', function(config, generalSer
                     url:            config.resourcesPath + 'images/store-services/recetas.jpg'
                 },
                 path: {
-                    url:            generalService.getPaths().recetas
+                    url:            generalService.getPaths().recipes
                 }
             }
         ]
     };
-    
     return factory;
 });
 storeServicesService.service('storeService', function(storeServicesFactory){
+    // Obtains all the store services for the business
     this.all = function() {
         return storeServicesFactory.getStoreServices();
     }

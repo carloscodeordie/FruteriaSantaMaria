@@ -10,7 +10,7 @@ var productsDirective = angular.module('productsDirective', [
             categories:                 '='
         },
         templateUrl:                    config.etcPath + 'directives/products/products.directive.html',
-        controller:                     function($scope, $localStorage, config) {
+        controller:                     function($scope, config) {
             
         }
     };

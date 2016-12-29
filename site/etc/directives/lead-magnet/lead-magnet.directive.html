@@ -7,8 +7,8 @@
                         <img ng-src="resources/images/lead-magnet/ice-cream.png">
                     </div>
                 </div>
-                <div class="col-md-6 col-xs-12 lead-magnet-content">
-                    <div>
+                <div class="col-md-6 col-xs-12">
+                    <div class="lead-magnet-content">
                         <div class="text-center">
                             <h2 class="title" ng-bind="messages.leadMagnet.title"></h2>
                         </div>
@@ -19,7 +19,9 @@
                             </li>
                         </ul>
                         <div class="send-button">
-                            <a class="btn btn-lg btn-block btn-success" href="#" role="button" ng-bind="messages.leadMagnet.buttonLabel"></a>
+                            <button class="btn btn-lg btn-block btn-success">
+                                <span ng-bind="messages.leadMagnet.buttonLabel"></span>
+                            </button>
                         </div>
                         <div class="confidential">
                             <p class="text-center">

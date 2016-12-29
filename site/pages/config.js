@@ -1,47 +1,65 @@
 var appConfig = angular.module('appConfig', [])
 .provider('config', function() {
-	
 	var config = this;
-	
+	// Paths
 	config.context = '/' + window.location.pathname.split('/')[1];
 	config.resourcesPath = '/resources/';
 	config.pagesPath = '/pages/';
 	config.etcPath = '/etc/';
 	config.api = '/api/';
 	config.geonames = 'http://api.geonames.org/';
+	config.sortProducts = 4;
+	// Router
 	config.home = '/home';
 	config.products = '/productos';
 	config.recipes = '/recetas';
-	config.sortProducts = 4;
+	config.promotion = '/promocion';
+	// Messages
 	config.messages = {
-		company:			'Frutería Santa María',
-		slogan:				'Tu mandado a domicilio!',
-		sloganDescription:	'Ordena tu mandado desde el celular y te llegara a la hora que lo pidas',
-		delivery:			'Tu envio es gratis!',
-		checkoutButton:		'Realizar pedido',
+		add:						'Agregar',
+		address:					'Dirección:',
+		apologies:					'Lo sentimos!',
+		checkoutButton:				'Realizar pedido',
+		close:						'Cerrar',
+		company:					'Frutería Santa María',
+		contact:					'Contacto',
+		contactUs:					'Contactanos:',
+		createdBy:					'Developed by @CodeOrDie',
+		delivery:					'Tu envio es gratis!',
+		email:						'Correo electronico:',
+		emailInvalid:				'Ingrese un correo valido.',
+		followMe:					'Sigueme',
+		followUs:					'Siguenos en:',
+		inputRequired:				'Ingrese este dato por favor.',
+		leadMagnet: {
+			title:					'Postres de Chef gratis',
+			subtitle:				'Como preparar postres estilo chef para tus hijos de manera sencilla',
+			confidential:			'Su información es 100% segura con nosotros',
+			buttonLabel:			'Si, envieme las recetas ahora',
+			benefits: [
+				{
+					description:	'Aprender como preparar nieve artesanal en casa'
+				},
+				{
+					description:	'Como sorprender a tus hijos con una tarta calientita'
+				},
+				{
+					description:	'Como consertirlos con unas crepas deliciosas'
+				}
+			]
+		},
+		menu:				'Menu de navegación',
 		moreLinks:			'Más links:',
+		name:				'Nombre:',
+		next:				'Siguiente',
+		order:				'Ordenar',
+		phone:				'Telefono:',
+		previous:			'Anterior',
 		products:			'Productos',
 		recipes:			'Recetas',
-		followUs:			'Siguenos en:',
-		contactUs:			'Contactanos:',
-		phone:				'Telefono:',
-		email:				'Correo electronico:',
-		createdBy:			'Developed by @CodeOrDie',
-		menu:				'Menu de navegación',
-		contact:			'Contacto',
-		name:				'Nombre:',
-		address:			'Dirección:',
-		apologies:			'Lo sentimos!',
-		inputRequired:		'Ingrese este dato por favor.',
-		emailInvalid:		'Ingrese un correo valido.',
-		close:				'Cerrar',
-		order:				'Ordenar',
-		add:				'Agregar',
-		previous:			'Anterior',
-		next:				'Siguiente',
-		followMe:			'Sigueme'
+		slogan:				'Tu mandado a domicilio!',
+		sloganDescription:	'Ordena tu mandado desde el celular y te llegara a la hora que lo pidas'
 	};
-	
 	this.$get = function() {
 		return config;
 	};

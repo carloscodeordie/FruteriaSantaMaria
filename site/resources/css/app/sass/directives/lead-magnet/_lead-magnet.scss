@@ -1,0 +1,48 @@
+// Import mixins
+@import '../../mixins/stretch-image';
+
+// Styles for myLeadMagnet directive
+my-lead-magnet {
+    .my-lead-magnet-directive {
+        // Add a top margin due fixed navbar
+        margin-top: 65px;
+        .container {
+            max-width: 1024px;
+            .jumbotron {
+                // Stretch the presentation image
+                @include stretch-image-mixin("../images/lead-magnet/background.jpg", 516px);
+                .lead-magnet-image {
+                    img {
+                        width: 100%;
+                    }
+                }
+                .lead-magnet-content {
+                    background-color: $lead-magnet-color;
+                    .title {
+                        font-family: 'Pacifico', sans-serif;
+                        color: $pink-bold-color;
+                    }
+                    .lead {
+                        margin: 20px 0;
+                        font-family: 'Dosis', sans-serif;
+                    }
+                    .benefits {
+                        margin: 10px 0;
+                        li {
+                            font-family: 'Roboto', sans-serif;
+                            font-size: 15px;
+                        }
+                    }
+                    .send-button {
+                        margin-top: 30px;
+                    }
+                    .confidential {
+                        .confidential-text {
+                            font-size: 15px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

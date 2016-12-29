@@ -1,0 +1,35 @@
+<section class="my-lead-magnet-directive">
+    <div class="container">
+        <div class="jumbotron">
+            <div class="row">
+                <div class="col-md-6 col-xs-12">
+                    <div class="lead-magnet-image">
+                        <img ng-src="resources/images/lead-magnet/ice-cream.png">
+                    </div>
+                </div>
+                <div class="col-md-6 col-xs-12 lead-magnet-content">
+                    <div>
+                        <div class="text-center">
+                            <h2 class="title" ng-bind="messages.leadMagnet.title"></h2>
+                        </div>
+                        <p class="lead" ng-bind="messages.leadMagnet.subtitle"></p>
+                        <ul class="benefits">
+                            <li ng-repeat="benefit in messages.leadMagnet.benefits">
+                                <strong ng-bind="benefit.description"></strong>
+                            </li>
+                        </ul>
+                        <div class="send-button">
+                            <a class="btn btn-lg btn-block btn-success" href="#" role="button" ng-bind="messages.leadMagnet.buttonLabel"></a>
+                        </div>
+                        <div class="confidential">
+                            <p class="text-center">
+                                <span class="glyphicon glyphicon-lock" aria-hidden="true"></span>
+                                <i class="confidential-text" ng-bind="messages.leadMagnet.confidential"></i>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

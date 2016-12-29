@@ -11,24 +11,25 @@ $red-color: #CE221E;
 $footer-color: #222;
 $recommendation-color: #F199B8;
 $advantages-color: #AFAFAF;
-
+$lead-magnet-color: #FFBBDA;
+// Screen sizes
 $small-devices: 768px;
 $medium-devices: 992px;
 $large-devices: 1200px;
-
+// Project path
 $project-path: absolute-path("..");
-
 // Fonts declaration
 @import 'https://fonts.googleapis.com/css?family=Roboto:400,900';
 @import 'https://fonts.googleapis.com/css?family=Dosis:400,800';
 @import 'https://fonts.googleapis.com/css?family=Pacifico';
 @import 'https://fonts.googleapis.com/css?family=PT+Sans';
-
+// Import Sass files 
 @import 'directives/advantages/advantages';
 @import 'directives/cart/cart';
 @import 'directives/cart-detail/cart-detail';
 @import 'directives/facebook/share-button/facebook-share-button';
 @import 'directives/footer/footer';
+@import 'directives/lead-magnet/lead-magnet';
 @import 'directives/navbar/navbar';
 @import 'directives/presentation/presentation';
 @import 'directives/product-category/product-category';

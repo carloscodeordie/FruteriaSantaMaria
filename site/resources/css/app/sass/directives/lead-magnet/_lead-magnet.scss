@@ -36,6 +36,10 @@ my-lead-magnet {
                     }
                     .send-button {
                         margin-top: 30px;
+                        button {
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                        }
                     }
                     .confidential {
                         .confidential-text {

@@ -46,19 +46,20 @@ var appConfig = angular.module('appConfig', [])
 				{
 					description:	'Como consertirlos con unas crepas deliciosas'
 				}
-			]
+			],
+			button:					'Obtener las recetas ahora'
 		},
-		menu:				'Menu de navegación',
-		moreLinks:			'Más links:',
-		name:				'Nombre:',
-		next:				'Siguiente',
-		order:				'Ordenar',
-		phone:				'Telefono:',
-		previous:			'Anterior',
-		products:			'Productos',
-		recipes:			'Recetas',
-		slogan:				'Tu mandado a domicilio!',
-		sloganDescription:	'Ordena tu mandado desde el celular y te llegara a la hora que lo pidas'
+		menu:						'Menu de navegación',
+		moreLinks:					'Más links:',
+		name:						'Nombre:',
+		next:						'Siguiente',
+		order:						'Ordenar',
+		phone:						'Telefono:',
+		previous:					'Anterior',
+		products:					'Productos',
+		recipes:					'Recetas',
+		slogan:						'Tu mandado a domicilio!',
+		sloganDescription:			'Ordena tu mandado desde el celular y te llegara a la hora que lo pidas'
 	};
 	this.$get = function() {
 		return config;

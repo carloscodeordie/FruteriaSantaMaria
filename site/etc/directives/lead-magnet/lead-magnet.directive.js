@@ -5,7 +5,7 @@ var leadMagnetDirective = angular.module('leadMagnetDirective', [
     return {
         restrict:                       'E',
         scope: {
-            
+            idModal:                    '@'
         },
         templateUrl:                    config.etcPath + 'directives/lead-magnet/lead-magnet.directive.html',
         controller:                     function($scope, config) {

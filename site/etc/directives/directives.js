@@ -5,6 +5,7 @@ var directivesModule = angular.module('directivesModule', [
     'facebookShareButtonDirective',
     'footerDirective',
     'leadMagnetDirective',
+    'leadMagnetModalDirective',
     'navbarDirective',
     'orderModalDirective',
     'presentationDirective',

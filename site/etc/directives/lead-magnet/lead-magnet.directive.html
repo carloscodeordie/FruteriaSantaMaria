@@ -19,8 +19,12 @@
                             </li>
                         </ul>
                         <div class="send-button">
-                            <button class="btn btn-lg btn-block btn-success">
-                                <span ng-bind="messages.leadMagnet.buttonLabel"></span>
+                            <button
+                                type="button"
+                                class="btn btn-lg btn-block btn-success"
+                                data-toggle="modal" 
+                                data-target="#{{idModal}}">
+                                    <span ng-bind="messages.leadMagnet.buttonLabel"></span>
                             </button>
                         </div>
                         <div class="confidential">

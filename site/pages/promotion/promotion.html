@@ -1,5 +1,23 @@
 <section class="my-promotion">
     <my-navbar></my-navbar>
-    <my-lead-magnet></my-lead-magnet>
+    <my-lead-magnet 
+        id-modal="leadMagnetModal">
+    </my-lead-magnet>
+    <my-lead-magnet-modal 
+        id-modal="leadMagnetModal"
+        title="Escribe tu nombre y tu email para enviarte las recetas">
+    </my-lead-magnet-modal>
+    <my-success-modal
+        id-modal="successModal"
+        title="Woohoooo!, sus recetas han sido enviadas!!"
+        content="Agradecemos su preferencia en Frutería Santa María" 
+        path="home">
+    </my-success-modal>
+    <my-success-modal
+        id-modal="errorModal"
+        title="Error al enviar las recetas"
+        content="Lo sentimos, hubo un error al enviarte las recetas, por favor marque a nuestro telefono y con gusto se las enviaremos a su correo electronico" 
+        path="home">
+    </my-success-modal>
     <my-footer></my-footer>
 </section>

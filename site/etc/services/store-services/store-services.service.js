@@ -10,7 +10,7 @@ storeServicesService.factory('storeServicesFactory', function(config, generalSer
                 name:               'Frutas y verduras',
                 description:        '',
                 image: {
-                    url:            config.resourcesPath + 'images/store-services/frutas_y_verduras.jpg'
+                    url:            config.resourcesPath + 'images/store-services/fruits.jpg'
                 },
                 path: {
                     url:            generalService.getPaths().products
@@ -20,7 +20,7 @@ storeServicesService.factory('storeServicesFactory', function(config, generalSer
                 name:               'Recetas',
                 description:        '',
                 image: {
-                    url:            config.resourcesPath + 'images/store-services/recetas.jpg'
+                    url:            config.resourcesPath + 'images/store-services/recipes.jpg'
                 },
                 path: {
                     url:            generalService.getPaths().recipes

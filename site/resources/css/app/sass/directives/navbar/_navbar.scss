@@ -11,42 +11,32 @@ my-navbar {
             background-color: $pink-light-color;
             border-color: $pink-light-color;
             background-image: none;
-
             // Change height size of Bootstrap's navbar-default
-            min-height: 35px;
-
+            min-height: 7rem;
             // Change margin bottom of Bootstrap's navbar
-            margin-bottom: 0px;
-
+            margin-bottom: 0;
             .navbar-header {
                 // Change height size and paddings of Bootstrap's navbar-brand
                 .navbar-brand {
-                    height: 35px;
-                    padding: 8px 15px 7px 15px;
-
-                    span {
+                    height: 7rem;
+                    .brand {
                         @include nav-font-mixin;
                     }
                 }
             }
-
             #myNavbar {
                 .nav.navbar-nav {
+                    margin-top: 1.5rem;
                     a {
-                        // Change paddings from Bootstrap's nav
-                        padding-top: 8px;
-                        padding-bottom: 7px;
-
                         @include nav-font-mixin;
-
                         // Add a margin when tab contains a description
                         .description {
-                            margin-right: 10px;
+                            margin-right: 1rem;
                         }
-
                         // Add opacity
                         .link {
                             @include opacity-mixin;
+                            margin-right: 1rem;
                         }
                         // Add opacity effects
                         .link:hover {
@@ -56,16 +46,13 @@ my-navbar {
                     .my-social-container {
                         .pull-left {
                             // Add a padding to separate the social network icons
-                            padding: 2px 0px 2px 15px;
-
+                            padding: 0 1rem 0 0;
                             .my-social-icon {
                                 // Change heights for social icons
-                                height: 30px;
-
+                                height: 3rem;
                                 // Add opacity
                                 @include opacity-mixin;
                             }
-
                             // Add opacity effects
                             .my-social-icon:hover {
                                 @include no-opacity-mixin;

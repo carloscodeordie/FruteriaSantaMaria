@@ -105,10 +105,9 @@ gulp.task('process-site-scripts', function() {
         .pipe(concat('app.js'))
         .pipe(gulp.dest(DIST_FOLDER + '/resources/js'))
         .pipe(rename({suffix: '.min'}))
-        /*.pipe(uglify({
+        .pipe(uglify({
             mangle: false
         }))
-        */
         .pipe(gulp.dest(DIST_FOLDER + '/resources/js'))
         .pipe(notify({ message: 'FRUTERIA SANTA MARIA -> process-site-scripts task complete' }));
 });

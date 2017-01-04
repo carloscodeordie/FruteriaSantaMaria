@@ -10,51 +10,43 @@
 my-presentation {
     .my-presentation-directive {
         // Add a top margin due fixed navbar
-        margin-top: 35px;
+        margin-top: 6rem;
         .container-fluid {
-
             // Remove paddings of Bootstrap's container
             @include no-container-paddings-mixin;
-
             .presentation-container {
-                
                 /* Extra small devices */
                 @media (max-width: $small-devices) {
                     // Stretch the presentation image
                     @include stretch-image-mixin("../images/presentation/salad.jpg", 500px);
                 }
-
                 /* Small devices */
                 @media (min-width: $small-devices) {
                     // Stretch the presentation image
-                    @include stretch-image-mixin("../images/presentation/salad.jpg", 650px);
+                    @include stretch-image-mixin("../images/presentation/salad.jpg", 800px);
                 }
-
                 /* Medium devices */
                 @media (min-width: $medium-devices) {
                     // Stretch the presentation image
-                    @include stretch-image-mixin("../images/presentation/salad.jpg", 650px);
+                    @include stretch-image-mixin("../images/presentation/salad.jpg", 800px);
                 }
-
                 /* Large devices */
                 @media (min-width: $large-devices) {
                     // Stretch the presentation image
-                    @include stretch-image-mixin("../images/presentation/salad.jpg", 650px);
+                    @include stretch-image-mixin("../images/presentation/salad.jpg", 800px);
                 }
-                
                 .jumbotron {
                     // Makes transparent the Bootstrap's Jumbotron background color
                     background-color: transparent;
                     .navbar {
                         // Add padding top for inner navbar
-                        padding-top: 20px;
-
+                        padding-top: 2rem;
                         .navbar-header {
                             .navbar-brand {
                                 .my-logo {
                                     // Move position of logo
-                                    margin-top: -70px;
-                                    margin-left: -20px;
+                                    margin-top: -7rem;
+                                    margin-left: -2rem;
                                 }
                             }
                         }
@@ -62,16 +54,12 @@ my-presentation {
                             .nav.navbar-nav {
                                 .my-search {
                                     // Change position of search button
-                                    margin-top: 20px;
-                                    
+                                    margin-top: 2rem;
                                     // Change size and color of search button 
                                     @include search-button-mixin;
-
                                     // Add opacity
                                     @include opacity-mixin;
-                                    
                                 }
-
                                 .my-search:hover {
                                     // Add opacity effects
                                     @include no-opacity-mixin;
@@ -80,45 +68,41 @@ my-presentation {
                         }
                     }
                     .presentation-content {
-                        
                         /* Extra small devices */
                         @media (max-width: $small-devices) {
                             // Shows content at bottom
-                            margin-top: 20px;
+                            margin-top: 2rem;
                         }
-                        
                         /* Small devices */
                         @media (min-width: $small-devices) {
                             // Shows content at bottom
-                            margin-top: 200px;
+                            margin-top: 20rem;
                         }
-
                         /* Medium devices */
                         @media (min-width: $medium-devices) {
                             // Shows content at bottom
-                            margin-top: 200px;
+                            margin-top: 20rem;
                         }
-                        
-                        h1 {
-                            font-family: 'Dosis', sans-serif;
-                            font-weight: 700;
-                            color: $orange-color;
-                        }
-
-                        .presentation-description {
-                            color: $inverse-color;
-                            font-weight: bold;
-                        }
-
-                        .btn {
-                            @include pink-button-mixin;
-                            padding-left: 40px;
-                            padding-right: 40px;
+                        .presentation {
+                            width: 70%;
+                            .presentation-title {
+                                font-family: 'Dosis', sans-serif;
+                                font-weight: 700;
+                                color: $pink-bold-color;
+                            }
+                            .presentation-description {
+                                color: $inverse-color;
+                                font-weight: bold;
+                            }
+                            .presentation-button > .btn {
+                                @include pink-button-mixin;
+                                padding-left: 4rem;
+                                padding-right: 4rem;
+                            }
                         }
                     }
                 }
             }
         }
-        
     }
 }

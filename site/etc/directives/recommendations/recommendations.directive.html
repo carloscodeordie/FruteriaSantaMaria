@@ -14,7 +14,7 @@
                 <div>
                     <div class="callout">
                         <div class="profile">
-                            <h3 class="name" ng-bind="recommender.name"></h3>
+                            <h1 class="name" ng-bind="recommender.name"></h1>
                             <p class="company">
                                 <span ng-bind="recommender.position"></span>
                                 <span ng-if="recommender.company">-</span>
@@ -25,7 +25,9 @@
                             </p>
                         </div>
                         <div class="comments">
-                            <p class="lead" ng-bind="recommender.reviewTitle"></p>
+                            <div class="text-center">
+                                <p class="lead" ng-bind="recommender.reviewTitle"></p>
+                            </div>
                             <div class="scrollable-container">
                                 <blockquote>
                                     <p class="subheader" ng-bind="recommender.reviewDescription"></p>
@@ -33,7 +35,7 @@
                             </div>
                         </div>
                         <div class="site">
-                            <div class="text-right">
+                            <div class="text-center">
                                 <a class="btn btn-lg btn-primary" target="_blank" href="{{recommender.site.url}}">
                                     <span ng-bind="messages.followMe"></span>
                                 </a>

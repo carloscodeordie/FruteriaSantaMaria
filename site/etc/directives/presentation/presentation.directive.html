@@ -5,11 +5,6 @@
                 <div class="container">
                     <nav class="navbar">
                         <div class="container-fluid">
-                            <div class="navbar-header">
-                                <a class="navbar-brand" href="/index.html#home">
-                                    <img class="my-logo img-responsive" ng-src="resources/images/presentation/logo.png">
-                                </a>
-                            </div>
                             <div id="presentation-navbar" class="navbar-collapse collapse">
                                 <ul class="nav navbar-nav navbar-right">
                                     <li>
@@ -20,12 +15,14 @@
                         </div>
                     </nav>
                     <div class="presentation-content">
-                        <div class="text-right">
-                            <h1 ng-bind="messages.slogan"></h1>
-                            <p class="presentation-description" ng-bind="messages.sloganDescription"></p>
-                            <p>
-                                <a class="btn btn-lg btn-default" href="/index.html#productos" role="button" ng-bind="messages.order"></a>
-                            </p>
+                        <div class="pull-left presentation">
+                            <div class="text-left">
+                                <h1 class="presentation-title" ng-bind="messages.slogan"></h1>
+                                <h2 class="presentation-description" ng-bind="messages.sloganDescription"></h2>
+                                <p class="presentation-button">
+                                    <a class="btn btn-lg btn-default" href="#productos" role="button" ng-bind="messages.order"></a>
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>

@@ -6,43 +6,36 @@ my-store-services {
     .my-services-directive {
         .jumbotron {
             background-color: transparent;
-            margin-top: -150px;
+            margin-top: -15rem;
             margin-bottom: 0;
             padding-bottom: 0;
-            
             .container {
                 // padding around store services blocks
-                padding: 30px 30px 0 30px;
+                padding: 3rem 3rem 0 3rem;
                 background-color: $inverse-color;
-
                 .service-container {
                     position: relative;
                     h1 {
                         // Make header appears inside the image
                         position: absolute;
                         width: 100%;
-                        
                         // Change services fonts
                         @include services-font-mixin;
-
                         /* Extra small devices */
                         @media (max-width: $small-devices) {
                             // Shows content at bottom
-                            margin-top: 70px;
+                            margin-top: 7rem;
                         }
-                        
                         /* Small devices */
                         @media (min-width: $small-devices) {
                             // Shows content at bottom
-                            margin-top: 200px;
+                            margin-top: 20rem;
                         }
-
                         /* Medium devices */
                         @media (min-width: $medium-devices) {
                             // Shows content at bottom
-                            margin-top: 150px;
+                            margin-top: 15rem;
                         }
-                        
                     }
                     img {
                         width: 100%;

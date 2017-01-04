@@ -7,11 +7,11 @@
                 </a>
             </div>
             <div class="col-xs-12 col-md-5 columna">
-                <h4 class="subtitle" ng-bind="messages.company"></h4>
-                <p ng-bind="messages.sloganDescription"></p>
+                <h3 class="subtitle" ng-bind="messages.company"></h3>
+                <p class="description" ng-bind="messages.sloganDescription"></p>
             </div>
             <div class="col-xs-12 col-md-4 columna">
-                <h4 class="subtitle" ng-bind="messages.moreLinks"></h4>
+                <h3 class="subtitle" ng-bind="messages.moreLinks"></h3>
                 <ul class="list-inline">
                     <li>
                         <a class="link" ng-href="{{paths.products}}" ng-bind="messages.products"></a>
@@ -24,7 +24,7 @@
         </div>
         <div class="row ultima">
             <div class="col-xs-12 col-md-4 columna">
-                <h4 class="subtitle" ng-bind="messages.followUs"></h4>
+                <h3 class="subtitle" ng-bind="messages.followUs"></h3>
                 <ul class="list-inline">
                     <li>
                         <a ng-href="{{social.facebook.url}}">
@@ -39,16 +39,16 @@
                 </ul>
             </div>
             <div class="col-xs-12 col-md-5 columna">
-                <h4 class="subtitle" ng-bind="messages.contactUs"></h4>
+                <h3 class="subtitle" ng-bind="messages.contactUs"></h3>
                 <ul class="list-unstyled">
                     <li>
-                        <span ng-bind="messages.phone"></span>&nbsp;
+                        <span class="description" ng-bind="messages.phone"></span>&nbsp;
                         <a class="link" href="tel:{{store.phone}}">
                             <span ng-bind="store.phone"></span>
                         </a>
                     </li>
                     <li>
-                        <span ng-bind="messages.email"></span>&nbsp;
+                        <span class="description" ng-bind="messages.email"></span>&nbsp;
                         <a class="link" href="mailto:{{store.email}}">
                             <span ng-bind="store.email"></span>
                         </a>

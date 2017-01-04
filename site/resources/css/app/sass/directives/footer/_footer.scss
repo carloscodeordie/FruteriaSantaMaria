@@ -6,27 +6,25 @@ my-footer {
         background-color: $footer-color;
         color: $inverse-color;
         font-family: 'Roboto', sans-serif;
-        font-size: 12px;
-
         .container {
-            padding-top: 40px;
-            padding-bottom: 0px;
+            padding-top: 4rem;
+            padding-bottom: 0;
             .row {
                 .columna {
                     border: $pink-light-color 1px solid;
-                    height: 130px;
-                    padding: 10px 20px;
+                    height: 13rem;
+                    padding: 1rem 2rem;
                     .subtitle {
                         font-weight: 900;
-                        font-size: 14px;
                         color: $pink-bold-color;
                     }
                     .logo {
-                        height: 100px;
-                        margin: 5px auto;
+                        height: 10rem;
+                        margin: 0.5rem auto;
                     }
-                    .link {
+                    .link, .description {
                         color: $inverse-color;
+                        font-size: 2rem;
                     }
                 }
                 /* Medium devices */
@@ -48,7 +46,7 @@ my-footer {
                 }
             }
             .copyright {
-                margin-top: 10px;
+                margin-top: 1rem;
             }
         }
     }

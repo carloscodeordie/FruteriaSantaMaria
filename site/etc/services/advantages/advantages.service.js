@@ -13,14 +13,14 @@ advantagesService.factory('advantagesFactory', function(config) {
                 }
             },
             {
-                title:                  'Precio',
+                title:                  'Precios bajos',
                 description:            'Tenemos los mejores precios para ti de toda la colonia',
                 image: {
                     url:                config.resourcesPath + 'images/advantages/price.png'
                 }
             },
             {
-                title:                  'Recetas',
+                title:                  'Recetas gratis',
                 description:            'Unete a nuestra comunidad donde podras compartir y aprender deliciosas y recetas para ti y tu familia',
                 image: {
                     url:                config.resourcesPath + 'images/advantages/recipes.png'

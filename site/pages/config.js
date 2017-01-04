@@ -53,7 +53,7 @@ var appConfig = angular.module('appConfig', [])
 		moreLinks:					'Más links:',
 		name:						'Nombre:',
 		next:						'Siguiente',
-		order:						'Ordenar',
+		order:						'Ordenar a tu casa',
 		phone:						'Telefono:',
 		previous:					'Anterior',
 		products:					'Productos',

@@ -12,15 +12,15 @@ my-navbar {
             border-color: $pink-light-color;
             background-image: none;
             // Change height size of Bootstrap's navbar-default
-            min-height: 7rem;
+            min-height: 6rem;
             // Change margin bottom of Bootstrap's navbar
             margin-bottom: 0;
             .navbar-header {
                 // Change height size and paddings of Bootstrap's navbar-brand
                 .navbar-brand {
-                    height: 7rem;
-                    .brand {
-                        @include nav-font-mixin;
+                    height: 6rem;
+                    .logo {
+                        height: 100%;
                     }
                 }
             }

@@ -1,0 +1,24 @@
+// Import mixins
+
+// Styles for modals
+.modal {
+    .modal-dialog {
+        .modal-body {
+            form {
+                .form-group {
+                    label {
+                        font-size: 2rem;
+                    }
+                }
+            }
+        }
+        .modal-footer {
+            button {
+                font-size: 2.6rem;
+            }
+        }
+    }
+    .modal-dialog.modal-lg {
+        width: 900px;
+    }
+}

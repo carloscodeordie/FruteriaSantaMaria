@@ -3,14 +3,17 @@ my-cart-detail {
     .my-cart-detail-directive {
         border-bottom: 1px solid $gray-bold-color;
         .cart-detail-container {
-            padding: 5px 0;
+            padding: 0.5rem 0;
+            font-family: 'Helvetica Nueue', Helvetica, Arial, sans-serif;
             img {
-                height: 35px;
+                height: 4rem;
+                margin-top: 1.5rem;
+                margin-left: 1rem;
             }
             .remove-icon {
                 span {
                     color: $red-color;
-                    font-size: 20px;
+                    font-size: 3rem;
                 }
             }
         }

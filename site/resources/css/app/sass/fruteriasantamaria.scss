@@ -12,7 +12,9 @@ $footer-color: #222;
 $recommendation-color: #F199B8;
 $advantages-color: #AFAFAF;
 $lead-magnet-color: #FFBBDA;
+$product-selected-color: #FFDDEB;
 // Screen sizes
+$extra-small-devices: 320px;
 $small-devices: 768px;
 $medium-devices: 992px;
 $large-devices: 1200px;
@@ -36,3 +38,4 @@ $project-path: absolute-path("..");
 @import 'directives/products/products';
 @import 'directives/recommendations/recommendations';
 @import 'directives/store-services/store-services';
+@import 'directives/modal/modal';

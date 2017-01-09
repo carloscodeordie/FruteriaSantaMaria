@@ -7,7 +7,7 @@
 // Styles for myProductCategory directive
 my-product-category {
     .my-product-category-directive {
-        margin-bottom: 20px;
+        margin-bottom: 2rem;
         .container-fluid {
             padding-left: 0;
             padding-right: 0;
@@ -18,12 +18,12 @@ my-product-category {
                 }
                 .carousel {
                     .carousel-inner {
-                        margin: auto 0px;
+                        margin: auto 0;
                         .col-md-2 {
                             padding-left: 0;
                             padding-right: 0;
                             .product-container {
-                                padding: 10px 20px;
+                                padding: 1rem 2rem;
                                 @include product-border-mixin;
                                 .product-image {
                                     img {
@@ -31,13 +31,19 @@ my-product-category {
                                     }
                                 }
                                 .product-details {
-                                    min-height: 80px;
+                                    min-height: 8rem;
+                                    p {
+                                        font-size: 2.2rem;
+                                    }
                                 }
                                 .product-order {
                                     button {
                                         @include pink-button-mixin;
                                     }
                                 }
+                            }
+                            .product-container.product-added {
+                                background-color: $product-selected-color;
                             }
                         }
                         .col-md-2:last-child {
@@ -47,7 +53,7 @@ my-product-category {
                         }
                     }
                     .carousel-control {
-                        width: 50px;
+                        width: 5rem;
                     }
                     .carousel-control.left{
                         margin-left: 2%;

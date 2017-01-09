@@ -5,7 +5,7 @@
 my-lead-magnet {
     .my-lead-magnet-directive {
         // Add a top margin due fixed navbar
-        margin-top: 65px;
+        margin-top: 6.5rem;
         .container {
             max-width: 1024px;
             .jumbotron {
@@ -18,32 +18,35 @@ my-lead-magnet {
                 }
                 .lead-magnet-content {
                     background-color: $lead-magnet-color;
-                    padding: 10px 20px;
+                    padding: 1rem 2rem;
                     .title {
                         font-family: 'Pacifico', sans-serif;
+                        font-size: 5rem;
                         color: $pink-bold-color;
                     }
                     .lead {
-                        margin: 20px 0;
+                        margin: 2rem 0;
                         font-family: 'Dosis', sans-serif;
+                        font-size: 3.3rem;
                     }
                     .benefits {
-                        margin: 10px 0;
+                        margin: 1rem 0;
                         li {
                             font-family: 'Roboto', sans-serif;
-                            font-size: 15px;
+                            font-size: 2.4rem;
                         }
                     }
                     .send-button {
-                        margin-top: 30px;
-                        button {
+                        margin-top: 3rem;
+                        .btn {
                             overflow: hidden;
                             text-overflow: ellipsis;
+                            font-size: 3.5rem;
                         }
                     }
                     .confidential {
                         .confidential-text {
-                            font-size: 15px;
+                            font-size: 2rem;
                         }
                     }
                 }

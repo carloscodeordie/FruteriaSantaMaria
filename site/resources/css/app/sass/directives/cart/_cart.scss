@@ -6,11 +6,11 @@ my-cart {
     .my-cart-directive {
         .icon-cart-container {
             .icon {
-                margin: 20px 30px;
+                margin: 2rem 3rem;
                 cursor: pointer;
                 position: relative;
                 .glyphicon {
-                    font-size: 40px;
+                    font-size: 6rem;
                     color: $pink-opacity-color;
                 }
                 .glyphicon.open {
@@ -18,11 +18,10 @@ my-cart {
                 }
                 .total {
                     position: absolute;
-                    top: 7px;
-                    left: 18px;
-
+                    top: 1rem;
+                    left: 2.8rem;
+                    font-size: 2rem;
                     font-family: 'Roboto', sans-serif;
-                    font-size: 14px;
                     color: $inverse-color;
                 }
             }
@@ -32,12 +31,11 @@ my-cart {
             border: 1px solid $gray-bold-color;
             .resume {
                 background-color: $gray-bold-color;
-                padding: 5px 10px;
+                padding: 0.5rem 1rem;
                 .clearfix {
-                    margin-bottom: 10px;
+                    margin-bottom: 1rem;
                     .header {
                         .badge {
-                            font-size: 13px;
                             background-color: $gray-light-color;
                         }
                         .title {
@@ -48,6 +46,7 @@ my-cart {
                     .btn.checkout {
                         background-color: $gray-light-color;
                         color: $inverse-color;
+                        font-size: 2.2rem;
                     }
                 }
                 .calendar {
@@ -56,23 +55,25 @@ my-cart {
                 }
             }
             .items {
-                padding: 10px;
+                padding: 1rem;
                 background-color: $inverse-color;
-                min-height: 275px;
-                height: 275px;
+                min-height: 60rem;
+                height: 60rem;
                 overflow-y: auto;
-                overflow-x: hidden;
+                overflow-x: visible;
                 .promotion {
                     font-family: 'PT Sans', sans-serif;
+                    font-size: 2.5rem;
                     color: $gray-bold-color;
                 }
             }
             .checkout {
-                padding: 10px;
+                padding: 1rem;
                 background-color: $inverse-color;
-                .checkout {
+                .btn.checkout {
                     background-color: $orange-color;
                     color: $inverse-color;
+                    font-size: 2.8rem;
                 }
             }
         }

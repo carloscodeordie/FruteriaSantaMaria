@@ -1,14 +1,14 @@
 <section class="my-product-category-directive">
     <div class="container-fluid">
         <div class="product-category-container">
-            <h2 class="category-title" ng-bind="category.name"></h2>
+            <h1 class="category-title" ng-bind="category.name"></h1>
             <div id="carousel-{{category.name | lowercase}}" class="carousel slide" data-interval="false">
                 <!-- Wrapper for slides -->
                 <div class="carousel-inner" role="listbox">
                     <div class="item" ng-repeat="products in sortedProducts track by $index" ng-class="{'active': isFirstElement($index)}">
                         <div class="row-fluid">
                             <div class="col-md-2 col-xs-6" ng-repeat="product in products" ng-class="{'col-md-offset-2': isFirstElement($index)}">
-                                <div class="product-container">
+                                <div class="product-container" ng-class="{'product-added': product.cart.isAdded}">
                                     <div class="product-image">
                                         <img class="img-responsive" ng-src="{{product.image.url}}">
                                     </div>
@@ -18,11 +18,13 @@
                                             <span>&nbsp;&#47;&nbsp;</span>
                                             <em ng-bind="product.unity"></em>
                                         </p>
-                                        <p ng-bind="product.name"></p>
-                                        <em ng-bind="product.description"></em>
+                                        <p>
+                                            <span ng-bind="product.name"></span>
+                                            <span ng-if="product.cart.isAdded">&nbsp;&#40;{{product.quantity}} {{product.unity}}&#41;</span>
+                                        </p>
                                     </div>
                                     <div class="product-order clearfix">
-                                        <div class="pull-right">
+                                        <div class="text-center">
                                             <button class="btn btn-default" ng-click="removeProduct(product)" ng-if="product.cart.isAdded">
                                                 <span class="glyphicon glyphicon-minus" aria-hidden="true"></span>
                                             </button>

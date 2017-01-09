@@ -23,7 +23,7 @@ storeServicesService.factory('storeServicesFactory', function(config, generalSer
                     url:            config.resourcesPath + 'images/store-services/recipes.jpg'
                 },
                 path: {
-                    url:            generalService.getPaths().recipes
+                    url:            generalService.getPaths().promotion
                 }
             }
         ]

@@ -26,9 +26,10 @@ generalService.factory('generalFactory', function(config) {
     };
     factory.getPathsData = function() {
         return {
-            home:           config.context + '#home',
-            products:       config.context + '#productos',
-            recipes:        config.context + '#recetas'
+            home:           '/home',
+            products:       '/productos',
+            recipes:        '/recetas',
+            promotion:      '/promocion'
         };
     };
     return factory;

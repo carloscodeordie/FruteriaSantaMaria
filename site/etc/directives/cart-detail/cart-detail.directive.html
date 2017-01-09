@@ -3,23 +3,28 @@
         <div class="clearfix">
             <div class="row">
                 <div class="col-md-4">
-                    <input ng-model="product.quantity" type="number" class="form-control" step="0.25" min="0.25">
+                    <div class="quantity-container">
+                        <h3 class="description">Cantidad ({{product.unity}}):</h3>
+                        <input ng-model="product.quantity" type="number" class="form-control" step="0.25" min="0.25">
+                    </div>
                 </div>
                 <div class="col-md-5">
                     <div class="clearfix">
                         <div class="pull-left">
-                            <h5 class="remove-icon" ng-click="removeProduct(product)">
+                            <h3 class="remove-icon" ng-click="removeProduct(product)">
                                 <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
-                            </h5>
+                            </h3>
                         </div>
                         <div class="pull-left">
                             <img class="img-responsive" ng-src="{{product.image.url}}">
                         </div>
-                        <h5 ng-bind="product.name"></h5>
+                        <div class="pull-left">
+                            <h3 ng-bind="product.name"></h3>
+                        </div>
                     </div>
                 </div>
                 <div class="col-md-3">
-                    <h5>{{ product | totalPrice:product.price:product.quantity | currency}}</h5>
+                    <h3>Precio: {{ product | totalPrice:product.price:product.quantity | currency}}</h3>
                 </div>  
             </div>
         </div>

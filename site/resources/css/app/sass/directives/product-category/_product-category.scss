@@ -16,8 +16,8 @@ my-product-category {
                     margin-left: 8.33333333%;
                     @include product-font-mixin;
                 }
-                .carousel {
-                    .carousel-inner {
+                .product-carousel {
+                    .product-carousel-inner {
                         margin: auto 0;
                         .col-md-2 {
                             padding-left: 0;

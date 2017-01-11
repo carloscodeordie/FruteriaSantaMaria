@@ -2,8 +2,49 @@
     <div class="container-fluid">
         <div class="product-category-container">
             <h1 class="category-title" ng-bind="category.name"></h1>
+            <div id="carousel-{{category.name | lowercase}}" class="product-carousel">
+                <div class="product-carousel-inner">
+                    <div uib-carousel active="0" interval="none" no-wrap="true" template-url="/template/carousel/carousel.html">
+                        <div uib-slide ng-repeat="products in sortedProducts track by $index" index="$index" template-url="/template/carousel/slide.html">
+                            <div class="row-fluid">
+                                <div class="col-md-2 col-xs-6" ng-repeat="product in products" ng-class="{'col-md-offset-2': isFirstElement($index)}">
+                                    <div class="product-container" ng-class="{'product-added': product.cart.isAdded}">
+                                        <div class="product-image">
+                                            <img class="img-responsive" ng-src="{{product.image.url}}">
+                                        </div>
+                                        <div class="product-details">
+                                            <p>
+                                                <strong>{{product.price | currency}}</strong>
+                                                <span>&nbsp;&#47;&nbsp;</span>
+                                                <em ng-bind="product.unity"></em>
+                                            </p>
+                                            <p>
+                                                <span ng-bind="product.name"></span>
+                                                <span ng-if="product.cart.isAdded">&nbsp;&#40;{{product.quantity}} {{product.unity}}&#41;</span>
+                                            </p>
+                                        </div>
+                                        <div class="product-order clearfix">
+                                            <div class="text-center">
+                                                <button class="btn btn-default" ng-click="removeProduct(product)" ng-if="product.cart.isAdded">
+                                                    <span class="glyphicon glyphicon-minus" aria-hidden="true"></span>
+                                                </button>
+                                                <button class="btn btn-default" ng-click="addProduct(product)">
+                                                    <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+                                                    <span>&nbsp;{{messages.add}}</span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!--
             <div id="carousel-{{category.name | lowercase}}" class="carousel slide" data-interval="false">
-                <!-- Wrapper for slides -->
                 <div class="carousel-inner" role="listbox">
                     <div class="item" ng-repeat="products in sortedProducts track by $index" ng-class="{'active': isFirstElement($index)}">
                         <div class="row-fluid">
@@ -39,7 +80,6 @@
                         </div>
                     </div>
                 </div>
-                <!-- Controls -->
                 <a class="left carousel-control" href="#carousel-{{category.name | lowercase}}" role="button" data-slide="prev">
                     <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
                     <span class="sr-only" ng-bind="messages.previous"></span>
@@ -49,6 +89,7 @@
                     <span class="sr-only" ng-bind="messages.next"></span>
                 </a>
             </div>
+            -->
 
         </div>
     </div>

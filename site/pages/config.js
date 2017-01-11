@@ -6,6 +6,7 @@ var appConfig = angular.module('appConfig', [])
 	config.resourcesPath = '/resources/';
 	config.pagesPath = '/pages/';
 	config.etcPath = '/etc/';
+	config.templatesPath = '/template/';
 	config.api = '/api/';
 	config.geonames = 'http://api.geonames.org/';
 	config.sortProducts = 4;

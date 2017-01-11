@@ -1,5 +1,6 @@
-var productCategoryDirective = angular.module('productCategoryDirective', [
-    'appConfig'
+ var productCategoryDirective = angular.module('productCategoryDirective', [
+    'appConfig',
+    'ui.bootstrap'
 ])
 .directive('myProductCategory', function(config) {
     return {

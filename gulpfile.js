@@ -25,6 +25,7 @@ gulp.task('default', function(callback) {
     'process-site-index',
     'process-site-pages',
     'process-directive-pages',
+    'process-template-pages',
     'process-site-styles',
     'process-site-scripts',
     'process-resources-scripts',
@@ -82,6 +83,15 @@ gulp.task('process-directive-pages', function() {
         .pipe(notify({ message: 'FRUTERIA SANTA MARIA -> process-directive-pages task complete' }));
 });
 
+gulp.task('process-template-pages', function() {
+    util.log('FRUTERIA SANTA MARIA -> Running process-templates-pages task...');
+    return gulp.src([
+            SITE_FOLDER + '/template/**/*.html'
+        ])
+        .pipe(gulp.dest(DIST_FOLDER + '/template'))
+        .pipe(notify({ message: 'FRUTERIA SANTA MARIA -> process-templates-pages task complete' }));
+});
+
 gulp.task('process-site-styles', function() {
     util.log('FRUTERIA SANTA MARIA -> Running process-site-styles task...');
     return sass(SITE_FOLDER + '/resources/css/app/sass/**/*.scss')
@@ -105,9 +115,11 @@ gulp.task('process-site-scripts', function() {
         .pipe(concat('app.js'))
         .pipe(gulp.dest(DIST_FOLDER + '/resources/js'))
         .pipe(rename({suffix: '.min'}))
+        /*
         .pipe(uglify({
             mangle: false
         }))
+        */
         .pipe(gulp.dest(DIST_FOLDER + '/resources/js'))
         .pipe(notify({ message: 'FRUTERIA SANTA MARIA -> process-site-scripts task complete' }));
 });
@@ -116,21 +128,24 @@ gulp.task('process-resources-scripts', function() {
     util.log('FRUTERIA SANTA MARIA -> Running process-resources-scripts task...');
     return gulp.src([
             SITE_FOLDER + '/resources/js/jquery/*.js',
-            SITE_FOLDER + '/resources/js/underscore/*.js',
             SITE_FOLDER + '/resources/js/lodash/*.js',
+            SITE_FOLDER + '/resources/js/moment/*.js',
+            SITE_FOLDER + '/resources/js/underscore/*.js',
             SITE_FOLDER + '/resources/js/angular/*.js',
             SITE_FOLDER + '/resources/js/ngStorage/*.js',
+            SITE_FOLDER + '/resources/js/angular-animate/*.js',
+            SITE_FOLDER + '/resources/js/angular-google-maps/*.js',
             SITE_FOLDER + '/resources/js/angular-messages/*.js',
+            SITE_FOLDER + '/resources/js/angular-resource/*.js',
             SITE_FOLDER + '/resources/js/angular-route/*.js',
             SITE_FOLDER + '/resources/js/angular-simple-logger/*.js',
-            SITE_FOLDER + '/resources/js/angular-google-maps/*.js',
-            SITE_FOLDER + '/resources/js/angular-resource/*.js',
+            SITE_FOLDER + '/resources/js/angular-touch/*.js',
             SITE_FOLDER + '/resources/js/bootstrap/*.js',
-            SITE_FOLDER + '/resources/js/moment/*.js',
             SITE_FOLDER + '/resources/js/bootstrap-datetimepicker/*.js',
             SITE_FOLDER + '/resources/js/fullcalendar/fullcalendar.min.js',
             SITE_FOLDER + '/resources/js/fullcalendar/gcal.js',
-            SITE_FOLDER + '/resources/js/fullcalendar/lang-all.js'
+            SITE_FOLDER + '/resources/js/fullcalendar/lang-all.js',
+            SITE_FOLDER + '/resources/js/angular-ui-bootstrap/*.js'
         ])
         .pipe(concat('vendor.js'))
         .pipe(gulp.dest(DIST_FOLDER + '/resources/js'))

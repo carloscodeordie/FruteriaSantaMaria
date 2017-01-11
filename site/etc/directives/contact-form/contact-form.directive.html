@@ -1,0 +1,73 @@
+<section class="my-contact-form-directive">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-6 col-xs-offset-3 col-md-4 col-md-offset-4">
+                <div class="contact-form-container">
+                    <form name="contactForm" no-validate>
+                        <div class="text-center">
+                            <h2 class="title" ng-bind="messages.contact"></h2>
+                        </div>
+                        <div class="form-group">
+                            <label for="customer-name" ng-bind="messages.name"></label>
+                            <input
+                                id="customer-name"
+                                name="customerName"
+                                ng-model="contact.name"
+                                type="text"
+                                class="form-control input-lg"
+                                placeholder="Nombre"
+                                required>
+                            <div class="help-block" ng-messages="contactForm.customerName.$error" ng-if="submitted && contactForm.customerName.$invalid">
+                                <div class="alert alert-danger" role="alert">
+                                    <strong ng-bind="messages.apologies"></strong>&nbsp;
+                                    <span ng-bind="messages.inputRequired"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="customer-email" ng-bind="messages.email"></label>
+                            <input
+                                id="customer-email"
+                                name="customerEmail"
+                                ng-model="contact.email"
+                                type="email"
+                                class="form-control input-lg"
+                                placeholder="Email"
+                                required>
+                            <div class="help-block" ng-messages="contactForm.customerEmail.$error" ng-if="submitted && contactForm.customerEmail.$invalid">
+                                <div class="alert alert-danger" role="alert">
+                                    <strong ng-bind="messages.apologies"></strong>&nbsp;
+                                    <span ng-bind="messages.emailInvalid"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="customer-comments" ng-bind="messages.comments"></label>
+                            <textarea
+                                id="customer-comments"
+                                name="customerComments"
+                                ng-model="contact.comments"
+                                class="form-control"
+                                rows="5"
+                                required
+                                maxlength="300">
+                            </textarea>
+                            <p class="text-right">{{300 - contact.comments.length}} caracteres restantes</p>
+                            <div class="help-block" ng-messages="contactForm.customerComments.$error" ng-if="submitted && contactForm.customerComments.$invalid">
+                                <div class="alert alert-danger" role="alert">
+                                    <strong ng-bind="messages.apologies"></strong>&nbsp;
+                                    <span ng-bind="messages.inputRequired"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="clearfix">
+                            <div class="pull-right">
+                                <button ng-click="makeContact()" ng-disabled="submitted && contactForm.$invalid" type="button" class="btn btn-large" ng-bind="messages.send"></button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

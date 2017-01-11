@@ -15,6 +15,7 @@ var navbarDirective = angular.module('navbarDirective', [
             var initData = function() {
                 $scope.store = generalService.getStore();
                 $scope.social = generalService.getSocial();
+                $scope.contactLink = config.contact;
             };
             // Initialization of values
             var initValues = function() {

@@ -4,7 +4,8 @@ var routerModule = angular.module('routerModule', [
     'homeModule',
 	'productsModule',
 	'recipesModule',
-	'promotionModule'
+	'promotionModule',
+	'contactModule'
 ]);
 
 routerModule.config(['configProvider', '$routeProvider', '$locationProvider', 
@@ -25,6 +26,10 @@ routerModule.config(['configProvider', '$routeProvider', '$locationProvider',
 			.when(configProvider.promotion, {
 				templateUrl:    configProvider.pagesPath + '/promotion/promotion.html',
                 controller:     'promotionController'
+			})
+			.when(configProvider.contact, {
+				templateUrl:    configProvider.pagesPath + '/contact/contact.html',
+                controller:     'contactController'
 			})
             .otherwise({
 				redirectTo: configProvider.home

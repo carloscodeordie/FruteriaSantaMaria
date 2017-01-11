@@ -1,0 +1,34 @@
+// Import mixins
+@import '../../mixins/stretch-image';
+@import '../../mixins/pink-button';
+
+// Styles for myCart directive
+my-contact-form {
+    .my-contact-form-directive {
+        margin-top: 6rem;
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+        // Stretch the presentation image
+        @include stretch-image-mixin("../images/contact-form/contact.png", 900px);
+        .contact-form-container {
+            .title {
+                font-family: 'Pacifico',sans-serif;
+                color: $pink-bold-color;
+            }
+            form {
+                margin-top: 6rem;
+                padding: 1rem 3rem 3rem 3rem;
+                background-color: $inverse-color;
+                border-radius: 5px;
+                .form-group {
+                    label {
+                        font-size: 1.8rem;
+                    }
+                }
+                .btn {
+                    @include pink-button-mixin;
+                }
+            }
+        }
+    }
+}

@@ -9,11 +9,11 @@
                     <h2 class="modal-title" id="orderModalLabel" ng-bind="title"></h2>
                 </div>
                 <div class="modal-body">
-                    <form name="customerForm" novalidate>
+                    <form name="orderForm" novalidate>
                         <div class="form-group">
                             <label for="customerName" ng-bind="messages.name"></label>
                             <input ng-model="customer.name" type="text" name="customerName" class="form-control input-lg" id="customerName" placeholder="Ej: Mayra Jimenez" required>
-                            <div class="help-block" ng-messages="customerForm.customerName.$error" ng-if="submitted && customerForm.customerName.$invalid">
+                            <div class="help-block" ng-messages="orderForm.customerName.$error" ng-if="submitted && orderForm.customerName.$invalid">
                                 <div class="alert alert-danger" role="alert">
                                     <strong ng-bind="messages.apologies"></strong>&nbsp;
                                     <span ng-bind="messages.inputRequired"></span>
@@ -23,7 +23,7 @@
                         <div class="form-group">
                             <label for="customerAddress" ng-bind="messages.address"></label>
                             <input ng-model="customer.address" type="text" name="customerAddress" class="form-control input-lg" id="customerAddress" placeholder="Ej: Calzada Villaplata 613 #1, Residencial Alcazar" required>
-                            <div class="help-block" ng-messages="customerForm.customerAddress.$error" ng-if="submitted && customerForm.customerAddress.$invalid">
+                            <div class="help-block" ng-messages="orderForm.customerAddress.$error" ng-if="submitted && orderForm.customerAddress.$invalid">
                                 <div class="alert alert-danger" role="alert">
                                     <strong ng-bind="messages.apologies"></strong>&nbsp;
                                     <span ng-bind="messages.inputRequired"></span>
@@ -32,18 +32,12 @@
                         </div>
                         <div class="form-group">
                             <label for="customerPhone" ng-bind="messages.phone"></label>
-                            <input ng-model="customer.phone" type="text" name="customerPhone" class="form-control input-lg" id="customerPhone" placeholder="Ej: 449-100-2000" required>
-                            <div class="help-block" ng-messages="customerForm.customerPhone.$error" ng-if="submitted && customerForm.customerPhone.$invalid">
-                                <div class="alert alert-danger" role="alert">
-                                    <strong ng-bind="messages.apologies"></strong>&nbsp;
-                                    <span ng-bind="messages.inputRequired"></span>
-                                </div>
-                            </div>
+                            <input ng-model="customer.phone" type="text" name="customerPhone" class="form-control input-lg" id="customerPhone" placeholder="Ej: 449-100-2000">
                         </div>
                         <div class="form-group">
                             <label for="customerEmail" ng-bind="messages.email"></label>
                             <input ng-model="customer.email" type="email" name="customerEmail" class="form-control input-lg" id="customerEmail" placeholder="Ej: mayra.jimenez@gmail.com" required>
-                            <div class="help-block" ng-messages="customerForm.customerEmail.$error" ng-if="submitted && customerForm.customerEmail.$invalid">
+                            <div class="help-block" ng-messages="orderForm.customerEmail.$error" ng-if="submitted && orderForm.customerEmail.$invalid">
                                 <div class="alert alert-danger" role="alert">
                                     <strong ng-bind="messages.apologies"></strong>&nbsp;
                                     <span ng-bind="messages.emailInvalid"></span>
@@ -54,7 +48,7 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default btn-lg" data-dismiss="modal" ng-bind="messages.close"></button>
-                    <button ng-click="makeOrder()" ng-disabled="submitted && customerForm.$invalid" type="button" class="btn btn-primary btn-lg" ng-bind="messages.checkoutButton"></button>
+                    <button ng-click="makeOrder()" ng-disabled="submitted && orderForm.$invalid" type="button" class="btn btn-primary btn-lg" ng-bind="messages.checkoutButton"></button>
                 </div>
             </div>
         </div>

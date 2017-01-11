@@ -16,7 +16,7 @@ var orderModalDirective = angular.module('orderModalDirective', [
                 if(!$scope.submitted) {
 			        $scope.submitted = true;
 		        }
-                if($scope.customerForm.$valid) {
+                if($scope.orderForm.$valid) {
                     $scope.$emit('makeOrderEmit', $scope.customer);
                     hideModal();
                 }

@@ -15,6 +15,7 @@ var appConfig = angular.module('appConfig', [])
 	config.products = '/productos';
 	config.recipes = '/recetas';
 	config.promotion = '/promocion';
+	config.contact = '/contacto';
 	// Messages
 	config.messages = {
 		add:						'Agregar',
@@ -59,6 +60,7 @@ var appConfig = angular.module('appConfig', [])
 		previous:					'Anterior',
 		products:					'Productos',
 		recipes:					'Recetas',
+		send:						'Enviar',
 		slogan:						'Tu mandado a domicilio!',
 		sloganDescription:			'Ordena tu mandado desde el celular y te llegara a la hora que lo pidas'
 	};
